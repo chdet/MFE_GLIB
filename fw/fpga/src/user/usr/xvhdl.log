@@ -1,0 +1,22 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd" into library work
+ERROR: [VRFC 10-149] 'system_flash_sram_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:9]
+ERROR: [VRFC 10-149] 'system_pcie_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:10]
+ERROR: [VRFC 10-149] 'system_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:11]
+ERROR: [VRFC 10-149] 'fmc_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:12]
+ERROR: [VRFC 10-149] 'wb_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:13]
+ERROR: [VRFC 10-149] 'ipbus' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:14]
+ERROR: [VRFC 10-149] 'user_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:16]
+ERROR: [VRFC 10-149] 'user_version_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:17]
+INFO: [VRFC 10-307] analyzing entity user_logic
+ERROR: [VRFC 10-91] fmc_io_pin_type is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:108]
+ERROR: [VRFC 10-91] fmc_io_pin_type is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:116]
+ERROR: [VRFC 10-91] r_slv_to_ezdma2 is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:142]
+ERROR: [VRFC 10-91] r_slv_from_ezdma2 is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:143]
+ERROR: [VRFC 10-91] r_userdma_to_ezdma2_array is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:144]
+ERROR: [VRFC 10-91] r_userdma_from_ezdma2_array is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:145]
+ERROR: [VRFC 10-91] r_int_to_ezdma2 is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:146]
+ERROR: [VRFC 10-91] r_int_from_ezdma2 is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:147]
+ERROR: [VRFC 10-91] r_cfg_from_ezdma2 is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:148]
+ERROR: [VRFC 10-91] usersramcontrolr_array is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:152]
+ERROR: [VRFC 10-91] array_2x21bit is not declared [c:/users/charles/appdata/local/temp/tmpx7zz9c.vhd:153]
+INFO: [#UNDEF] Sorry, too many errors..
