@@ -69,7 +69,7 @@ SET_PARAMETER inject_sbit_error_wrch false
 SET_PARAMETER programmable_empty_type_rach No_Programmable_Empty_Threshold
 SET_PARAMETER input_depth_wrch 16
 SET_PARAMETER enable_data_counts_rach false
-SET_PARAMETER full_threshold_assert_value 131085
+SET_PARAMETER full_threshold_assert_value 131086
 SET_PARAMETER fifo_application_type_rach Data_FIFO
 SET_PARAMETER add_ngc_constraint_axi false
 SET_PARAMETER write_data_count_width 17
@@ -91,7 +91,7 @@ SET_PARAMETER full_threshold_assert_value_rach 1023
 SET_PARAMETER fifo_implementation_wdch Common_Clock_Block_RAM
 SET_PARAMETER enable_ecc_wdch false
 SET_PARAMETER programmable_empty_type_axis No_Programmable_Empty_Threshold
-SET_PARAMETER empty_threshold_assert_value 2
+SET_PARAMETER empty_threshold_assert_value 4
 SET_PARAMETER inject_sbit_error_wdch false
 SET_PARAMETER data_count false
 SET_PARAMETER enable_data_counts_axis false
@@ -113,7 +113,7 @@ SET_PARAMETER ruser_width 1
 SET_PARAMETER fifo_application_type_wach Data_FIFO
 SET_PARAMETER enable_read_pointer_increment_by2 false
 SET_PARAMETER read_clock_frequency 1
-SET_PARAMETER full_threshold_negate_value 131084
+SET_PARAMETER full_threshold_negate_value 131085
 SET_PARAMETER empty_threshold_assert_value_wrch 1022
 SET_PARAMETER almost_empty_flag false
 SET_PARAMETER underflow_flag true
@@ -139,7 +139,7 @@ SET_PARAMETER register_slice_mode_rach Fully_Registered
 SET_PARAMETER rdch_type FIFO
 SET_PARAMETER tuser_width 4
 SET_PARAMETER enable_data_counts_wrch false
-SET_PARAMETER empty_threshold_negate_value 3
+SET_PARAMETER empty_threshold_negate_value 5
 SET_PARAMETER fifo_application_type_wrch Data_FIFO
 SET_PARAMETER enable_tready true
 SET_PARAMETER programmable_full_type_rach No_Programmable_Full_Threshold
@@ -148,7 +148,7 @@ SET_PARAMETER empty_threshold_assert_value_wdch 1022
 SET_PARAMETER aruser_width 1
 SET_PARAMETER enable_ruser false
 SET_PARAMETER use_embedded_registers false
-SET_PARAMETER performance_options Standard_FIFO
+SET_PARAMETER performance_options First_Word_Fall_Through
 SET_PARAMETER axi_type AXI4_Stream
 SET_PARAMETER enable_aruser false
 SET_PARAMETER enable_tdest false
