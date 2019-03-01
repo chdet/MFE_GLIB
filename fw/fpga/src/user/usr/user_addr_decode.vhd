@@ -19,7 +19,8 @@ package body user_addr_decode is
 		--              addr, "00------------------------------" is reserved (system ipbus fabric)
 		if    std_match(addr, "01000000000000000000000000------") then  	sel := user_ipb_stat_regs;
 		elsif std_match(addr, "01000000000000000000000001------") then  	sel := user_ipb_ctrl_regs;
---		 elsif std_match(addr, "01000000000000000000000100000000") then		sel := user_ipb_timer; -- xx
+		elsif std_match(addr, "01000000000000000000000010000000") then  	sel := user_ipb_fifo;
+--		elsif std_match(addr, "01000000000000000000000100000000") then		sel := user_ipb_timer; -- xx
 		--              addr, "1-------------------------------" is reserved (wishbone fabric)
 		else	
 			sel := 99;

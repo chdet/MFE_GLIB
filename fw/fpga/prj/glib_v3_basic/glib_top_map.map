@@ -10,7 +10,7 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sun Feb 24 18:45:58 2019
+Mapped Date    : Thu Feb 28 17:45:15 2019
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:67 - XILINXD_LICENSE_FILE is set to '/opt/Xilinx' in
@@ -1037,11 +1037,11 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 1 mins 9 secs 
-Total CPU  time at the beginning of Placer: 1 mins 7 secs 
+Total REAL time at the beginning of Placer: 1 mins 20 secs 
+Total CPU  time at the beginning of Placer: 1 mins 20 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:35278fc7) REAL time: 1 mins 18 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:21a43b1a) REAL time: 1 mins 31 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:837 - Partially locked IO Bus is found. 
@@ -1071,13 +1071,13 @@ WARNING:Place:837 - Partially locked IO Bus is found.
 INFO:Place:834 - Only a subset of IOs are locked. Out of 246 IOs, 226 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:35278fc7) REAL time: 1 mins 20 secs 
+Phase 2.7  Design Feasibility Check (Checksum:21a43b1a) REAL time: 1 mins 33 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d5f90a0b) REAL time: 1 mins 20 secs 
+Phase 3.31  Local Placement Optimization (Checksum:6a895c9) REAL time: 1 mins 33 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:d5f90a0b) REAL time: 1 mins 20 secs 
+Phase 4.37  Local Placement Optimization (Checksum:6a895c9) REAL time: 1 mins 33 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<5> (type
@@ -1099,31 +1099,39 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
    (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
-   LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1131,27 +1139,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1159,7 +1147,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1167,7 +1167,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1179,19 +1179,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1199,11 +1191,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1211,11 +1203,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1242,31 +1242,39 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
    (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
-   LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1274,27 +1282,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1302,7 +1290,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1310,7 +1310,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1322,19 +1322,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1342,11 +1334,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1354,11 +1346,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1379,31 +1379,39 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
    (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
-   LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1411,27 +1419,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1439,7 +1427,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1447,7 +1447,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1459,19 +1459,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1479,11 +1471,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1491,11 +1483,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1522,31 +1522,39 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13>
    (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
-   LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
+   LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1554,27 +1562,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type
-   LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1582,7 +1570,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1590,7 +1590,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1602,19 +1602,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
-   (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1622,11 +1614,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1634,11 +1626,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20>
+   (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27>
    (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1654,7 +1654,6 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/current_state_FSM_FFd4 (type FF)
    The load component should be of clock buffer type.
-....
 ....
 ......
 
@@ -1713,9 +1712,9 @@ Clock-Region: <CLOCKREGION_X1Y2>
 | clock |    region   |                                                                                      -----------------------------------------------
 |  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
 |-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2419 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<2>"
+|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2420 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<2>"
 |-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2421 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<0>"
+|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2422 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<0>"
 |-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
 
 
@@ -1785,10 +1784,10 @@ AREA_GROUP "CLKAG_system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds
 CLOCKREGION_X1Y4, CLOCKREGION_X1Y2;
 
 
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:c7d675b0) REAL time: 1 mins 43 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:442cb2d1) REAL time: 1 mins 58 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:c7d675b0) REAL time: 1 mins 43 secs 
+Phase 6.36  Local Placement Optimization (Checksum:442cb2d1) REAL time: 1 mins 58 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<5> (type LUTM)
@@ -1800,58 +1799,58 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<5> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<9> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<24> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<25> (type LUTM)
@@ -1860,34 +1859,34 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<2> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<4> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<12> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<28> (type LUTM)
@@ -1911,58 +1910,58 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<5> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<9> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<24> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<25> (type LUTM)
@@ -1971,34 +1970,34 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<2> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<4> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<12> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<28> (type LUTM)
@@ -2016,58 +2015,58 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<5> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<9> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<24> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<25> (type LUTM)
@@ -2076,34 +2075,34 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<2> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<4> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<12> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<28> (type LUTM)
@@ -2127,58 +2126,58 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<5> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<6> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<13> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<0> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<7> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<14> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<21> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<1> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<8> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<15> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<22> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<29> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<9> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<16> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<23> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<30> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<24> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<17> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<31> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<25> (type LUTM)
@@ -2187,34 +2186,34 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<2> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<3> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<10> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<4> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<11> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<18> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<12> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<19> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<26> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<20> (type LUTM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<27> (type LUTM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ipbus_addr_prediction_delayed<28> (type LUTM)
@@ -2229,41 +2228,38 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/current_state_FSM_FFd4 (type FF)
    The load component should be of clock buffer type.
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:c7d675b0) REAL time: 1 mins 43 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:442cb2d1) REAL time: 1 mins 58 secs 
 
 Phase 8.3  Local Placement Optimization
-....
-....
-Phase 8.3  Local Placement Optimization (Checksum:e52346ee) REAL time: 1 mins 45 secs 
+......
+Phase 8.3  Local Placement Optimization (Checksum:60ab37e0) REAL time: 1 mins 59 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:e52346ee) REAL time: 1 mins 45 secs 
+Phase 9.5  Local Placement Optimization (Checksum:60ab37e0) REAL time: 1 mins 59 secs 
 
 Phase 10.8  Global Placement
-........................................................................................
-..................................................................................................................................................................................................
-..................................................................................................................
-.................................................................
-Phase 10.8  Global Placement (Checksum:5e2560f7) REAL time: 2 mins 42 secs 
+.............................................................................................................
+......................................................................................................................................................................................
+.............................................................................................................................................
+.............................................................................................
+Phase 10.8  Global Placement (Checksum:77e9fd1f) REAL time: 3 mins 14 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:5e2560f7) REAL time: 2 mins 43 secs 
+Phase 11.5  Local Placement Optimization (Checksum:77e9fd1f) REAL time: 3 mins 15 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:b39bcca4) REAL time: 3 mins 15 secs 
+Phase 12.18  Placement Optimization (Checksum:e7a08dcf) REAL time: 3 mins 47 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:b39bcca4) REAL time: 3 mins 15 secs 
+Phase 13.5  Local Placement Optimization (Checksum:e7a08dcf) REAL time: 3 mins 47 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:ddfa5d52) REAL time: 3 mins 16 secs 
+Phase 14.34  Placement Validation (Checksum:5b12fbd9) REAL time: 3 mins 48 secs 
 
-Total REAL time to Placer completion: 3 mins 21 secs 
-Total CPU  time to Placer completion: 3 mins 40 secs 
+Total REAL time to Placer completion: 3 mins 54 secs 
+Total CPU  time to Placer completion: 4 mins 25 secs 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_936_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
@@ -2276,6 +2272,8 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_936_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
@@ -2313,38 +2311,26 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
-   MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -2352,26 +2338,518 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
+   MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
+WARNING:PhysDesignRules:2272 - Issue with pin connections and/or configuration on
+   block:<usr/ipb_user_fifo_inst/i_oh_rx_fifo/U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fif
+   o.inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1>:<FIFO36E1_FIFO36E1>.  INJECTSBITERR and
+   INJECTDBITERR are not supported when EN_ECC_READ and EN_ECC_WRITE are both not TRUE.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  737
+Number of warnings:  857
 Slice Logic Utilization:
-  Number of Slice Registers:                11,218 out of 160,000    7%
-    Number used as Flip Flops:              11,199
+  Number of Slice Registers:                11,542 out of 160,000    7%
+    Number used as Flip Flops:              11,523
     Number used as Latches:                     19
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      9,393 out of  80,000   11%
-    Number used as logic:                    8,725 out of  80,000   10%
-      Number using O6 output only:           5,662
-      Number using O5 output only:             366
-      Number using O5 and O6:                2,697
+  Number of Slice LUTs:                      9,491 out of  80,000   11%
+    Number used as logic:                    9,014 out of  80,000   11%
+      Number using O6 output only:           5,793
+      Number using O5 output only:             396
+      Number using O5 and O6:                2,825
       Number used as ROM:                        0
     Number used as Memory:                     117 out of  27,840    1%
       Number used as Dual Port RAM:              0
@@ -2383,20 +2861,20 @@ Slice Logic Utilization:
         Number using O6 output only:            69
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    551
-      Number with same-slice register load:    529
-      Number with same-slice carry load:        22
+    Number used exclusively as route-thrus:    360
+      Number with same-slice register load:    335
+      Number with same-slice carry load:        25
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,758 out of  20,000   18%
-  Number of LUT Flip Flop pairs used:       12,046
-    Number with an unused Flip Flop:         2,925 out of  12,046   24%
-    Number with an unused LUT:               2,653 out of  12,046   22%
-    Number of fully used LUT-FF pairs:       6,468 out of  12,046   53%
-    Number of unique control sets:             485
+  Number of occupied Slices:                 4,346 out of  20,000   21%
+  Number of LUT Flip Flop pairs used:       12,828
+    Number with an unused Flip Flop:         3,165 out of  12,828   24%
+    Number with an unused LUT:               3,337 out of  12,828   26%
+    Number of fully used LUT-FF pairs:       6,326 out of  12,828   49%
+    Number of unique control sets:             488
     Number of slice register sites lost
-      to control set restrictions:           1,371 out of 160,000    1%
+      to control set restrictions:           1,391 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -2418,9 +2896,9 @@ IO Utilization:
       Number of LOCed OPADs:                     4 out of       4  100%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                 34 out of     264   12%
+  Number of RAMB36E1/FIFO36E1s:                162 out of     264   61%
     Number using RAMB36E1 only:                 34
-    Number using FIFO36E1 only:                  0
+    Number using FIFO36E1 only:                128
   Number of RAMB18E1/FIFO18E1s:                  0 out of     528    0%
   Number of BUFG/BUFGCTRLs:                      9 out of      32   28%
     Number used as BUFGs:                        6
@@ -2451,11 +2929,11 @@ Specific Feature Utilization:
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                3.73
+Average Fanout of Non-Clock Nets:                3.55
 
-Peak Memory Usage:  1450 MB
-Total REAL time to MAP completion:  3 mins 36 secs 
-Total CPU time to MAP completion (all processors):   3 mins 55 secs 
+Peak Memory Usage:  1447 MB
+Total REAL time to MAP completion:  4 mins 11 secs 
+Total CPU time to MAP completion (all processors):   4 mins 42 secs 
 
 Mapping completed.
 See MAP report file "glib_top_map.mrp" for details.

@@ -1,0 +1,3 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/charles/appdata/local/temp/tmpixjggr.vho" into library work
+ERROR: [VRFC 10-1412] syntax error near COMPONENT [c:/users/charles/appdata/local/temp/tmpixjggr.vho:58]
+INFO: [VRFC 10-240] VHDL file c:/users/charles/appdata/local/temp/tmpixjggr.vho ignored due to errors

@@ -15,7 +15,7 @@ run
 -rtlview Yes
 -glob_opt AllClockNets
 -read_cores YES
--sd {"../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo" "../../src/system/cdce/cdce_phase_mon_v2/dpram" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo" "../../src/system/ethernet/ipcore_dir/sgmii" "../../src/system/ethernet/ipcore_dir/basex" "../../src/system/mem/sram" "../../src/system/cdce/cdce_phase_mon_v2/pll" "../../src/system/pll"  }
+-sd {"ipcore_dir" "../../src/system/cdce/cdce_phase_mon_v2/dpram" "../../src/system/ethernet/ipcore_dir/basex" "../../src/system/ethernet/ipcore_dir/sgmii" "../../src/system/mem/sram" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo" "../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo" "../../src/system/cdce/cdce_phase_mon_v2/pll" "../../src/system/pll"  }
 -write_timing_constraints NO
 -cross_clock_analysis NO
 -hierarchy_separator /

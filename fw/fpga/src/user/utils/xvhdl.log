@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/charles/appdata/local/temp/tmpruh_0k.vhd" into library work
+ERROR: [VRFC 10-149] 'ipbus' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:18]
+ERROR: [VRFC 10-149] 'gem_pkg' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:19]
+INFO: [VRFC 10-307] analyzing entity ipbus_slave
+ERROR: [VRFC 10-91] ipb_wbus is not declared [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:31]
+ERROR: [VRFC 10-91] ipb_rbus is not declared [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:32]
+ERROR: [VRFC 10-91] t_std32_array is not declared [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:35]
+ERROR: [VRFC 10-91] t_std32_array is not declared [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:36]
+ERROR: [VRFC 10-91] t_std32_array is not declared [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:42]
+ERROR: [VRFC 10-91] t_std32_array is not declared [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:44]
+ERROR: [VRFC 10-1504] unit ipbus_slave ignored due to previous errors [c:/users/charles/appdata/local/temp/tmpruh_0k.vhd:21]
+INFO: [VRFC 10-240] VHDL file c:/users/charles/appdata/local/temp/tmpruh_0k.vhd ignored due to errors

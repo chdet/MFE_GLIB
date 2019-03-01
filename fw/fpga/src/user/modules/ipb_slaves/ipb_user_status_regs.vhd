@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.ipbus.all;
 use work.system_package.all;
-use work.fifo_1.all;
 
 entity ipb_user_status_regs is
 generic(addr_width : natural := 6);
@@ -30,36 +29,7 @@ signal regs: array_32x32bit;
 	attribute keep of ack: signal is true;
 	attribute keep of sel: signal is true;
 
-	signal din, dout: std_logic_vector(31 downto 0);
-	signal wr_en, rd_en, full, empty, valid: std_logic;
-
-	COMPONENT fifo_1
-  PORT (
-    clk : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    wr_en : IN STD_LOGIC;
-    rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC;
-    valid : OUT STD_LOGIC
-  );
-
 begin
-
-	U0 : entity work.fifo_1
-  PORT MAP (
-    clk => clk,
-    rst => reset,
-    din => din,
-    wr_en => wr_en,
-    rd_en => rd_en,
-    dout => dout,
-    full => full,
-    empty => empty,
-    valid => valid
-  );
 
 	--=============================--
 	-- io mapping

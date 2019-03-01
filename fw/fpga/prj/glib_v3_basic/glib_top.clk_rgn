@@ -1,7 +1,7 @@
 Release 14.7 - reportgen P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Feb 24 18:52:56 2019
+Thu Feb 28 17:53:07 2019
 
 SUMMARY
 -------
@@ -12,35 +12,52 @@ Clock Reports by Clock Regions
 
 Clock Region X0Y0:
 ------------------
-Number of global clocks in this region: 5
+Number of global clocks in this region: 6
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
-   system/sram_w[1]_clk driven by BUFGCTRL_X0Y4 
    user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
    system/glib_pll_clkout_31_25_b driven by MMCM_ADV_X0Y0 
+   system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0 
    system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y2 
+   system/sram1_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y4 
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 1
+Number of local clocks in this region: 17
 List of local clocks in this region:
-   system/pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X55Y35 
+   system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o driven by SLICE_X48Y32 
+   system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o driven by SLICE_X49Y33 
+   system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o driven by SLICE_X44Y32 
+   system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o driven by SLICE_X46Y32 
+   system/spi/reset_i_cpol_i_AND_936_o driven by SLICE_X20Y30 
+   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X48Y34 
+   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X46Y34 
+   system/i2c_s/reset_regs_i[10][0]_AND_839_o driven by SLICE_X48Y25 
+   system/i2c_s/reset_regs_i[6][1]_AND_773_o driven by SLICE_X46Y27 
+   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X48Y32 
+   system/i2c_s/reset_regs_i[10][1]_AND_837_o driven by SLICE_X47Y28 
+   system/i2c_s/reset_regs_i[6][2]_AND_771_o driven by SLICE_X44Y29 
+   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X52Y33 
+   system/i2c_s/reset_regs_i[10][2]_AND_835_o driven by SLICE_X44Y27 
+   system/i2c_s/reset_regs_i[10][3]_AND_833_o driven by SLICE_X46Y28 
+   system/i2c_s/reset_regs_i[6][0]_AND_775_o driven by SLICE_X48Y24 
+   system/i2c_s/reset_regs_i[6][3]_AND_769_o driven by SLICE_X44Y26 
 
 Summary of components used in this region:
 
 Number of         IOBM:    30 used out of    40    75%
 Number of         IOBS:    29 used out of    40    72%
-Number of       SLICEL:   160 used out of  1560    10%
-Number of       SLICEM:    71 used out of   680    10%
+Number of RAMBFIFO36E1:     3 used out of    24    12%
+Number of       SLICEL:   335 used out of  1560    21%
+Number of       SLICEM:   159 used out of   680    23%
 
 Clock Region X1Y0:
 ------------------
-Number of global clocks in this region: 4
+Number of global clocks in this region: 3
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
-   system/sram_w[1]_clk driven by BUFGCTRL_X0Y4 
-   system/glib_pll_clkout_31_25_b driven by MMCM_ADV_X0Y0 
    system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0 
+   system/sram1_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y4 
 
 Number of regional clocks in this region: 0
 
@@ -52,102 +69,90 @@ Number of        GTXE1:     4 used out of     4   100%
 Number of         IOBM:    17 used out of    20    85%
 Number of         IOBS:    15 used out of    20    75%
 Number of     OLOGICE1:     3 used out of    40     7%
-Number of       SLICEL:    61 used out of  1280     4%
-Number of       SLICEM:    28 used out of   720     3%
+Number of RAMBFIFO36E1:    11 used out of    32    34%
+Number of       SLICEL:    95 used out of  1280     7%
+Number of       SLICEM:    69 used out of   720     9%
 
 Clock Region X0Y1:
 ------------------
-Number of global clocks in this region: 5
+Number of global clocks in this region: 4
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
-   system/sram_w[1]_clk driven by BUFGCTRL_X0Y4 
-   system/sram_w[2]_clk driven by BUFGCTRL_X0Y5 
-   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/sram2_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y5 
    system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y2 
+   system/sram1_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y4 
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 18
+Number of local clocks in this region: 3
 List of local clocks in this region:
-   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X55Y44 
-   system/spi/reset_i_cpol_i_AND_936_o driven by SLICE_X33Y44 
    system/pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y0 
-   system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o driven by SLICE_X48Y43 
-   system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o driven by SLICE_X51Y44 
-   system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o driven by SLICE_X51Y44 
-   system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o driven by SLICE_X49Y43 
-   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X48Y44 
-   system/i2c_s/reset_regs_i[10][0]_AND_839_o driven by SLICE_X48Y41 
-   system/i2c_s/reset_regs_i[6][1]_AND_773_o driven by SLICE_X46Y42 
-   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X52Y44 
-   system/i2c_s/reset_regs_i[10][1]_AND_837_o driven by SLICE_X44Y42 
-   system/i2c_s/reset_regs_i[6][2]_AND_771_o driven by SLICE_X47Y40 
-   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X48Y44 
-   system/i2c_s/reset_regs_i[10][2]_AND_835_o driven by SLICE_X46Y41 
-   system/i2c_s/reset_regs_i[10][3]_AND_833_o driven by SLICE_X45Y41 
-   system/i2c_s/reset_regs_i[6][0]_AND_775_o driven by SLICE_X50Y40 
-   system/i2c_s/reset_regs_i[6][3]_AND_769_o driven by SLICE_X47Y41 
+   system/pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X50Y45 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X48Y61 
 
 Summary of components used in this region:
 
 Number of         IOBM:    30 used out of    40    75%
 Number of         IOBS:    30 used out of    40    75%
-Number of       SLICEL:   553 used out of  1560    35%
-Number of       SLICEM:   202 used out of   680    29%
+Number of RAMBFIFO36E1:    23 used out of    24    95%
+Number of       SLICEL:   421 used out of  1560    26%
+Number of       SLICEM:   220 used out of   680    32%
 
 Clock Region X1Y1:
 ------------------
 Number of global clocks in this region: 2
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
-   system/sram_w[2]_clk driven by BUFGCTRL_X0Y5 
+   system/sram2_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y5 
 
 Number of regional clocks in this region: 2
 List of regional clocks in this region:
    system/mac_clk<2> driven by BUFR_X2Y5 
    system/mac_clk<0> driven by BUFR_X2Y4 
 
-Number of local clocks in this region: 1
-List of local clocks in this region:
-   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X48Y45 
+Number of local clocks in this region: 0
 
 Summary of components used in this region:
 
 Number of        GTXE1:     4 used out of     4   100%
 Number of         IOBM:    12 used out of    20    60%
 Number of         IOBS:    12 used out of    20    60%
-Number of RAMBFIFO36E1:    14 used out of    28    50%
-Number of       SLICEL:   619 used out of  1180    52%
-Number of       SLICEM:   372 used out of   700    53%
+Number of RAMBFIFO36E1:     6 used out of    28    21%
+Number of       SLICEL:   343 used out of  1180    29%
+Number of       SLICEM:   241 used out of   700    34%
 
 Clock Region X0Y2:
 ------------------
 Number of global clocks in this region: 11
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
-   system/sram_w[2]_clk driven by BUFGCTRL_X0Y5 
+   system/sram2_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y5 
    user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
    system/glib_pll_clkout_31_25_a driven by MMCM_ADV_X0Y0 
    system/glib_pll_clkout_31_25_b driven by MMCM_ADV_X0Y0 
    system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0 
    system/glib_pll_clkout_31_25_d_inv driven by MMCM_ADV_X0Y0 
    system/xpoint1_clk1 driven by BUFGCTRL_X0Y1 
-   system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y2 
    system/gbt_phase_monitoring/ttclk_pll/clkfbout_buf driven by BUFHCE_X1Y35 
    system/gbt_phase_monitoring/ttclk_pll/clkout0 driven by MMCM_ADV_X0Y5 
+   system/sram1_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y4 
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 1
+Number of local clocks in this region: 4
 List of local clocks in this region:
    system/gbt_phase_monitoring/ttclk_pll/clkfbout driven by MMCM_ADV_X0Y5 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y5 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X42Y116 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X40Y116 
 
 Summary of components used in this region:
 
 Number of         IOBM:    17 used out of    40    42%
 Number of         IOBS:    17 used out of    40    42%
-Number of       SLICEL:   211 used out of  1080    19%
-Number of       SLICEM:   126 used out of   680    18%
+Number of RAMBFIFO36E1:    18 used out of    24    75%
+Number of       SLICEL:   311 used out of  1080    28%
+Number of       SLICEM:   241 used out of   680    35%
 Number of      STARTUP:     1 used out of     1   100%
 
 Clock Region X1Y2:
@@ -155,7 +160,7 @@ Clock Region X1Y2:
 Number of global clocks in this region: 6
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
-   system/sram_w[2]_clk driven by BUFGCTRL_X0Y5 
+   system/sram2_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y5 
    user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
    system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce driven by BUFGCTRL_X0Y23 
    system/gbt_phase_monitoring/ttclk_x6 driven by BUFHCE_X1Y34 
@@ -168,12 +173,9 @@ List of regional clocks in this region:
    system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y7 
    system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y6 
 
-Number of local clocks in this region: 4
+Number of local clocks in this region: 1
 List of local clocks in this region:
-   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X56Y110 
    user_clk125_2 driven by IBUFDS_GTXE1_X0Y7 
-   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y5 
-   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X56Y110 
 
 Summary of components used in this region:
 
@@ -185,16 +187,19 @@ Number of         IOBS:    16 used out of    20    80%
 Number of         IPAD:     4 used out of    12    33%
 Number of     OLOGICE1:     1 used out of    40     2%
 Number of         OPAD:     4 used out of     8    50%
-Number of RAMBFIFO36E1:    17 used out of    28    60%
-Number of       SLICEL:   526 used out of  1280    41%
-Number of       SLICEM:   320 used out of   720    44%
+Number of RAMBFIFO36E1:    20 used out of    28    71%
+Number of       SLICEL:   502 used out of  1280    39%
+Number of       SLICEM:   329 used out of   720    45%
 Number of TEMAC_SINGLE:     2 used out of     2   100%
 
 Clock Region X0Y3:
 ------------------
-Number of global clocks in this region: 2
+Number of global clocks in this region: 5
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
+   system/sram2_if/bistClk_from_sramInterfaceIoControl driven by BUFGCTRL_X0Y5 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y2 
    system/ipb_inv_clk driven by BUFGCTRL_X0Y6 
 
 Number of regional clocks in this region: 0
@@ -204,7 +209,9 @@ Number of local clocks in this region: 0
 Summary of components used in this region:
 
 Number of         ICAP:     1 used out of     1   100%
-Number of       SLICEL:     2 used out of  1080     1%
+Number of RAMBFIFO36E1:    24 used out of    24   100%
+Number of       SLICEL:   122 used out of  1080    11%
+Number of       SLICEM:    89 used out of   680    13%
 
 Clock Region X1Y3:
 ------------------
@@ -212,9 +219,10 @@ Number of global clocks in this region: 1
 List of global clocks in this region:
    user_ipb_clk driven by BUFGCTRL_X0Y3 
 
-Number of regional clocks in this region: 1
+Number of regional clocks in this region: 2
 List of regional clocks in this region:
    system/mac_clk<2> driven by BUFR_X2Y5 
+   system/mac_clk<0> driven by BUFR_X2Y4 
 
 Number of local clocks in this region: 0
 
@@ -224,13 +232,16 @@ Number of         BUFR:     2 used out of     2   100%
 Number of        GTXE1:     4 used out of     4   100%
 Number of IBUFDS_GTXE1:     1 used out of     2    50%
 Number of         IPAD:     2 used out of    12    16%
-Number of RAMBFIFO36E1:     3 used out of    28    10%
-Number of       SLICEL:   286 used out of  1180    24%
-Number of       SLICEM:   221 used out of   700    31%
+Number of RAMBFIFO36E1:    12 used out of    28    42%
+Number of       SLICEL:   473 used out of  1180    40%
+Number of       SLICEM:   309 used out of   700    44%
 
 Clock Region X0Y4:
 ------------------
-Number of global clocks in this region: 0
+Number of global clocks in this region: 2
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y3 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
 
 Number of regional clocks in this region: 0
 
@@ -240,10 +251,15 @@ Summary of components used in this region:
 
 Number of         IOBM:     2 used out of    40     5%
 Number of         IOBS:     2 used out of    40     5%
+Number of RAMBFIFO36E1:    22 used out of    24    91%
+Number of       SLICEL:    25 used out of  1560     1%
+Number of       SLICEM:    27 used out of   680     3%
 
 Clock Region X1Y4:
 ------------------
-Number of global clocks in this region: 0
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y3 
 
 Number of regional clocks in this region: 0
 
@@ -252,4 +268,7 @@ Number of local clocks in this region: 0
 Summary of components used in this region:
 
 Number of        GTXE1:     4 used out of     4   100%
+Number of RAMBFIFO36E1:    23 used out of    28    82%
+Number of       SLICEL:    20 used out of  1280     1%
+Number of       SLICEM:    15 used out of   720     2%
 

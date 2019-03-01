@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-02-27T14:03:32</DateModified>
+  <DateModified>2019-02-28T22:16:33</DateModified>
   <ModuleName>glib_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-02-28T17:49:27</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/iseconfig/glib_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic\</ImplementationReportsDirectory>
   <DateInitialized>2019-02-24T17:04:11</DateInitialized>

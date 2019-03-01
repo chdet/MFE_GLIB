@@ -249,7 +249,14 @@ begin-- ARCHITECTURE
    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
 
-	
+	ipb_user_fifo_inst : entity work.ipb_user_fifo
+		port map (
+			clk        => ipb_clk_i,
+			reset      => reset_i,
+			ipb_mosi_i => ipb_mosi_i(user_ipb_fifo),
+			ipb_miso_o => ipb_miso_o(user_ipb_fifo)
+		);	
+
 	--===========================================--
 	stat_regs_inst: entity work.ipb_user_status_regs
 	--===========================================--

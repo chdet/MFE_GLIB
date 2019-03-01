@@ -1,0 +1,9 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd" into library work
+ERROR: [VRFC 10-149] 'ipbus' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd:4]
+ERROR: [VRFC 10-149] 'system_package' is not compiled in library work [c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd:5]
+INFO: [VRFC 10-307] analyzing entity ipb_user_status_regs
+ERROR: [VRFC 10-91] ipb_wbus is not declared [c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd:13]
+ERROR: [VRFC 10-91] ipb_rbus is not declared [c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd:14]
+ERROR: [VRFC 10-91] array_32x32bit is not declared [c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd:16]
+ERROR: [VRFC 10-1504] unit ipb_user_status_regs ignored due to previous errors [c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd:7]
+INFO: [VRFC 10-240] VHDL file c:/users/charles/appdata/local/temp/tmpfxpmr5.vhd ignored due to errors

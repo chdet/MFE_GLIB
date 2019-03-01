@@ -21,10 +21,11 @@ package user_package is
 	
 	
 	--=== ipb slaves =============--
-	constant number_of_ipb_slaves		: positive := 2 ;
+	constant number_of_ipb_slaves		: positive := 3 ;
    
 	constant user_ipb_stat_regs		: integer  := 0 ;
 	constant user_ipb_ctrl_regs		: integer  := 1 ;
+	constant user_ipb_fifo			: integer  := 2 ;
 
 	
 end user_package;

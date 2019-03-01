@@ -1,8 +1,8 @@
 INTSTYLE=impact
 INFILE=C:\Users\Charles\Documents\Vivado\glib_v3.r3497\fw\fpga\prj\impact.xsl
 OUTFILE=C:\Users\Charles\Documents\Vivado\glib_v3.r3497\fw\fpga\prj\impact.xsl
-FAMILY=None
-PART=None
+FAMILY=Single
+PART=Single
 WORKINGDIR=C:\Users\Charles\Documents\Vivado\glib_v3.r3497\fw\fpga\prj
 LICENSE=iMPACT
 USER_INFO=iMPACT

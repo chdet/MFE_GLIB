@@ -2,14 +2,13 @@ Release 14.7 ngdbuild P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -sd
-../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
-../../src/system/cdce/cdce_phase_mon_v2/dpram -sd
+ise -dd _ngo -sd ipcore_dir -sd ../../src/system/cdce/cdce_phase_mon_v2/dpram
+-sd ../../src/system/ethernet/ipcore_dir/basex -sd
+../../src/system/ethernet/ipcore_dir/sgmii -sd ../../src/system/mem/sram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram -sd
+../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
-../../src/system/ethernet/ipcore_dir/sgmii -sd
-../../src/system/ethernet/ipcore_dir/basex -sd ../../src/system/mem/sram -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
 timestamp -uc
 /home/cdetemme/Vivado/glib_v3.r3497/fw/fpga/src/system/sys/system.ucf -uc
@@ -18,6 +17,7 @@ xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
 "/home/cdetemme/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/glib_top.ngc" ...
+Loading design module "ipcore_dir/fifo_1.ngc"...
 Loading design module "../../src/system/mem/sram/ipbus_addr_delay.ngc"...
 Loading design module
 "../../src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ngc"...
@@ -107,6 +107,518 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk1_n', used in period specification
 Done...
 
 Checking expanded design ...
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[1].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[2].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[3].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[4].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[5].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[6].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[7].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[8].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[9].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[10].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[11].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[12].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[13].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[14].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[15].gbldc.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[8].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[7].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[6].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[5].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[4].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gchain.gp1[16].gbldl.inst_prim/gf36e1_inst.sngfifo36e1" of type
+   "FIFO36E1".  This attribute will be ignored.
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_17_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_18_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_19_OBUF' has no driver
@@ -651,8 +1163,6 @@ WARNING:NgdBuild:452 - logical net 'N802' has no driver
 WARNING:NgdBuild:452 - logical net 'N805' has no driver
 WARNING:NgdBuild:452 - logical net 'N806' has no driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
-WARNING:NgdBuild:452 - logical net 'system/ipb_from_fabric_ipb_err' has no
-   driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_to_slaves[4]_ipb_strobe' has no
    driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_from_slaves[0]_ipb_err' has no
@@ -1656,12 +2166,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1064
+  Number of warnings: 1191
 
-Total memory usage is 524924 kilobytes
+Total memory usage is 545612 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  33 sec
-Total CPU time to NGDBUILD completion:   33 sec
+Total REAL time to NGDBUILD completion:  43 sec
+Total CPU time to NGDBUILD completion:   43 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

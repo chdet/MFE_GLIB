@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Feb 28 15:24:07 2019
+# Process ID: 2464
+# Current directory: C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/src/user/usr
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/src/user/usr/vivado.log
+# Journal file: C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/src/user/usr\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/Charles/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+Vivado% 
