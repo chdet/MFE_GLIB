@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/cdetemme/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/glib_top.ncd
-OUTFILE=/home/cdetemme/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/glib_top.bit
-FAMILY=Virtex6
-PART=xc6vlx130t-1ff1156
-WORKINGDIR=/home/cdetemme/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic
-LICENSE=ISE
-USER_INFO=210713503_174110358_210646257_902

@@ -1,3 +1,0 @@
-vhdl work "../../src/system/sys/system_package.vhd"
-vhdl work "../../../cactus/ipbus_core/hdl/ipbus_package.vhd"
-vhdl work "../../src/user/modules/ipb_slaves/ipb_user_status_regs.vhd"
