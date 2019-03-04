@@ -90,6 +90,12 @@ begin
 			underflow => underflow
 		); 
 	
+	--=============================--
+	sel <= to_integer(unsigned(ipb_mosi_i.ipb_addr(addr_width downto 0))) when addr_width>0 else 0;
+	--=============================--
+
+	-- FIXME: Each consecutive block read to the fifo jumps forward by 3 words (3 missed words)
+	-- This most likely comes from an issue in the fifo reading procedure
 	
 	--=============================--
 	process(reset, ipbclk)
@@ -100,13 +106,18 @@ begin
 			err <= '0';
 			rd_en <= '0';
 		elsif rising_edge(ipbclk) then
-			-- read 
-			ipb_miso_o.ipb_rdata <= dout; 
-			-- ack
-			rd_en <= ipb_mosi_i.ipb_strobe; 
-			--ack <= (not ack) and valid; 
-			ack <= valid; 
-			err <= underflow; 
+			if (sel = 0) then
+				ipb_miso_o.ipb_rdata <= dout; 
+				rd_en <= ipb_mosi_i.ipb_strobe; 
+				ack <= rd_en and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
+				-- Keeping ack tied to valid alone would empty the fifo without any request, and prevent other register reads.
+				err <= underflow; 
+			else
+				ipb_miso_o.ipb_rdata <= (0 => overflow, others => '0'); 
+				ack <= ipb_mosi_i.ipb_strobe and not ack;
+				err <= '0'; 
+			end if;
+			
 			
 		end if; 
 	end process; 

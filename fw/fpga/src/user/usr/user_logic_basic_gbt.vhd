@@ -302,7 +302,7 @@ begin
 	CLK_DIV2 : process (usrclk_10)
 	begin
 		if rising_edge(usrclk_10) then
-			usrclk_5 <= not(usrclk_5);
+				usrclk_5 <= not(usrclk_5);
 		end if;
 	end process CLK_DIV2;
 
@@ -529,6 +529,9 @@ begin
 
 	        link_status_arr_o           => gbt_link_status
 	    );
+
+	gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
+	gtx_status(7) <= '1';
 
     gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
 	gbt_tx_data_wrapper(0)		<= gbt_tx_data(0);     
