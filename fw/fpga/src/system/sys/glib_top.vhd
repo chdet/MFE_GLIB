@@ -488,7 +488,7 @@ port map
 
 
 --===================================================--
-usr: entity work.user_logic
+usr: entity work.user_logic_gbt
 --===================================================--
 port map
 (	  

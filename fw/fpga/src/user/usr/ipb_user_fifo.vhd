@@ -8,7 +8,8 @@ entity ipb_user_fifo is
 	generic(addr_width : natural := 6); 
 	port
 	(
-		clk        : in  std_logic; 
+		ipbclk     : in  std_logic; 
+		usrclk     : in  std_logic; 
 		reset      : in  std_logic; 
 		ipb_mosi_i : in  ipb_wbus; 
 		ipb_miso_o : out ipb_rbus
@@ -33,10 +34,11 @@ architecture rtl of ipb_user_fifo is
 	signal din, dout                                                     : std_logic_vector(31 downto 0); 
 	signal wr_en, rd_en, full, empty, valid, underflow, overflow, wr_ack : std_logic; 
 	
-	COMPONENT fifo_1
+	COMPONENT fifo_2
 		PORT (
-			clk       : IN  STD_LOGIC; 
 			rst       : IN  STD_LOGIC; 
+			wr_clk    : IN  STD_LOGIC; 
+			rd_clk    : IN  STD_LOGIC; 
 			din       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0); 
 			wr_en     : IN  STD_LOGIC; 
 			rd_en     : IN  STD_LOGIC; 
@@ -53,27 +55,29 @@ architecture rtl of ipb_user_fifo is
 begin
 	
 	--=============================--
-	FIFO_GEN : process(reset, clk)
+	FIFO_GEN : process(reset, usrclk)
 	--=============================--
 	begin
 		if reset='1' then
 			wr_en <= '0'; 
-		elsif rising_edge(clk) then
+			cnt <= (others => '0');
+		elsif rising_edge(usrclk) then
+			cnt   <= cnt + 1; 
 			if(full = '0') then
-				cnt <= cnt + 1; 
-				wr_en <= '1';
+				wr_en <= '1'; 
 			else
-				wr_en <= '0';
+				wr_en <= '0'; 
 			end if; 
 		end if; 
 	end process; 
-
-	din <= std_logic_vector(cnt);
 	
-	i_oh_rx_fifo : fifo_1
+	din <= std_logic_vector(cnt); 
+	
+	i_oh_rx_fifo : fifo_2
 		PORT MAP (
-			clk       => clk,
 			rst       => reset,
+			wr_clk    => usrclk,
+			rd_clk    => ipbclk,
 			din       => din,
 			wr_en     => wr_en,
 			rd_en     => rd_en,
@@ -86,29 +90,28 @@ begin
 			underflow => underflow
 		); 
 	
-	--=============================--
-	--sel <= to_integer(unsigned(ipb_mosi_i.ipb_addr(addr_width downto 0))) when addr_width>0 else 0; 
-	--=============================--
 	
 	--=============================--
-	process(reset, clk)
+	process(reset, ipbclk)
 	--=============================--
 	begin
 		if reset='1' then
 			ack <= '0'; 
-		elsif rising_edge(clk) then
+			err <= '0';
+			rd_en <= '0';
+		elsif rising_edge(ipbclk) then
 			-- read 
 			ipb_miso_o.ipb_rdata <= dout; 
 			-- ack
-			rd_en <= ipb_mosi_i.ipb_strobe;
+			rd_en <= ipb_mosi_i.ipb_strobe; 
 			--ack <= (not ack) and valid; 
-			ack <= valid;
+			ack <= valid; 
 			err <= underflow; 
-				
-				end if; 
-		end process; 
-		
-		ipb_miso_o.ipb_ack <= ack; 
-		ipb_miso_o.ipb_err <= err; 
-		
-	end rtl;
+			
+		end if; 
+	end process; 
+	
+	ipb_miso_o.ipb_ack <= ack; 
+	ipb_miso_o.ipb_err <= err; 
+	
+end rtl;
