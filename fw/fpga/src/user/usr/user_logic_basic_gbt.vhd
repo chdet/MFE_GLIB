@@ -487,6 +487,8 @@ begin
 	--    GBT   --
 	--==========--
 
+	gbt_manual_reset <= ctrl_reg(1)(2);
+
 	i_gbt : entity work.gbt
 	    generic map(
 	        GBT_BANK_ID     => 0,

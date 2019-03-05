@@ -21,14 +21,14 @@ end ipb_user_fifo;
 
 architecture rtl of ipb_user_fifo is
 	
-	--signal sel : integer range 0 to 31; 
+	signal sel : integer range 0 to 31; 
 	signal ack : std_logic; 
 	signal err : std_logic; 
 	
 	attribute keep        : boolean; 
 	attribute keep of ack : signal is true; 
 	attribute keep of err : signal is true; 
-	--attribute keep of sel : signal is true; 
+	attribute keep of sel : signal is true; 
 	
 	signal cnt                                                           : unsigned(31 downto 0) := (others => '0'); 
 	signal din, dout                                                     : std_logic_vector(31 downto 0); 
@@ -109,7 +109,7 @@ begin
 			if (sel = 0) then
 				ipb_miso_o.ipb_rdata <= dout; 
 				rd_en <= ipb_mosi_i.ipb_strobe; 
-				ack <= rd_en and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
+				ack <= ipb_mosi_i.ipb_strobe and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
 				-- Keeping ack tied to valid alone would empty the fifo without any request, and prevent other register reads.
 				err <= underflow; 
 			else
