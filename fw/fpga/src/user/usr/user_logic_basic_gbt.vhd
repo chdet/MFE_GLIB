@@ -433,10 +433,10 @@ begin
 	port map (
 		mgt_clk_i               => mgtclk,
 
-		mgt_rx_p_i              => sfp_rx_p(1),
-		mgt_rx_n_i              => sfp_rx_n(1),
-		mgt_tx_p_o              => sfp_tx_p(1),
-		mgt_tx_n_o              => sfp_tx_n(1),
+		mgt_rx_p_i              => sfp_rx_p(4),
+		mgt_rx_n_i              => sfp_rx_n(4),
+		mgt_tx_p_o              => sfp_tx_p(4),
+		mgt_tx_n_o              => sfp_tx_n(4),
 
 		rx_reset_i              => gtx_reset,
 		tx_reset_i              => gtx_reset,
