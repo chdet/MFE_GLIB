@@ -210,6 +210,8 @@ end user_logic_gbt;
 							
 architecture user_logic_arch of user_logic_gbt is                    	
 
+	signal reset_pwrup : std_logic;
+
 	signal ctrl_reg		               : array_32x32bit;
 	signal stat_reg		               : array_32x32bit;
 
@@ -226,7 +228,12 @@ architecture user_logic_arch of user_logic_gbt is
     signal gtx_reset, gtx_reset_sync : std_logic;
     signal gtx_config, gtx_status, gtx_prbs_pattern, gtx_prbs_errors : std_logic_vector(31 downto 0);
 
-    -- GTX GBT
+    --== Slow control ==--
+    signal vfat3_sc_status              : t_vfat_slow_control_status; 
+    signal ttc_cmd              : t_ttc_cmds;
+	------------------------------------
+
+    --== GTX <-> GBT ==--
     signal mgt_gbt_tx_word_clk 			: std_logic_vector(0 downto 0);
     signal mgt_gbt_tx_word 				: std_logic_vector(WORD_WIDTH-1 downto 0);
 
@@ -237,6 +244,7 @@ architecture user_logic_arch of user_logic_gbt is
     signal gem_gt_gbt_tx_data   		: t_gt_gbt_data_arr(0 downto 0);
     signal gem_gt_gbt_rx_clk    		: std_logic_vector(0 downto 0);
     signal gem_gt_gbt_tx_clk    		: std_logic_vector(0 downto 0);
+	------------------------------------
 
 	--== GBT ==--
 	signal gbt_manual_reset 			: std_logic := '0';
@@ -317,7 +325,7 @@ begin
     );
 
 	--===========================================--
-	ipb_user_fifo_inst : entity work.ipb_user_fifo
+	ipb_user_fifo_inst : entity work.ipb_user_fifo_2
 	--===========================================--
 	port map (
 	ipbclk        		=> ipb_clk_i,
@@ -492,7 +500,7 @@ begin
 	i_gbt : entity work.gbt
 	    generic map(
 	        GBT_BANK_ID     => 0,
-	        NUM_LINKS       => 1,
+	        NUM_LINKS       => 1,	-- Only using one single GBT on the OH
 	        TX_OPTIMIZATION => 1,
 	        RX_OPTIMIZATION => 0,
 	        TX_ENCODING     => 0,
@@ -579,5 +587,58 @@ begin
 	    );
 
 	--===========================================--
+
+
+
+    --===================--
+    --    Slow Control   --
+    --===================--
+
+    i_slow_control : entity work.slow_control
+        generic map(
+            g_NUM_OF_OHs => 1,
+            g_DEBUG      => false
+        )
+        port map(
+            reset_i             => reset_i,
+            ttc_clk_i           => ttc_clcks,
+            ttc_cmds_i          => ttc_cmd,
+            gbt_rx_ready_i      => gbt_ready_wrapper,
+            gbt_rx_sca_elinks_i => sca_rx_data,
+            gbt_tx_sca_elinks_o => sca_tx_data,
+            gbt_rx_ic_elinks_i  => gbt_ic_rx_data_wrapper,
+            gbt_tx_ic_elinks_o  => gbt_ic_tx_data_wrapper,
+            vfat3_sc_status_i   => vfat3_sc_status,
+            ipb_reset_i         => reset_i or reset_pwrup,
+            ipb_clk_i           => ipb_clk_i,
+            ipb_miso_o          => ipb_miso_o(user_ipb_slow_control),
+            ipb_mosi_i          => ipb_mosi_i(user_ipb_slow_control)
+
+	--===========================================--
+
+
+    --================================--
+    -- TTC  
+    --================================--
+    -- TODO: NECESSARY ???
+
+    --i_ttc : entity work.ttc
+    --    port map(
+    --        reset_i             => reset,
+    --        ttc_clks_i          => ttc_clocks_i,
+    --        ttc_clks_locked_i   => ttc_clocks_locked_i,
+    --        ttc_data_p_i        => ttc_data_p_i,
+    --        ttc_data_n_i        => ttc_data_n_i,
+    --        ttc_cmds_o          => ttc_cmd,
+    --        ttc_daq_cntrs_o     => ttc_counters,
+    --        ttc_status_o        => ttc_status,
+    --        l1a_led_o           => led_l1a_o,
+    --        ipb_reset_i         => ipb_reset,
+    --        ipb_clk_i           => ipb_clk_i,
+    --        ipb_mosi_i          => ipb_mosi_arr_i(C_IPB_SLV.ttc),
+    --        ipb_miso_o          => ipb_miso_arr(C_IPB_SLV.ttc)
+    --    );
+    
+    --================================--
 
 end user_logic_arch;

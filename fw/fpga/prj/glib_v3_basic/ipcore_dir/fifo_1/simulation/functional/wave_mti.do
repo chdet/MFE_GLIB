@@ -57,13 +57,14 @@
 
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/CLK
 add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/RST
 add wave -noupdate -divider WRITE
+add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/WR_CLK
 add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/WR_EN
 add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/FULL
 add wave -noupdate -radix hexadecimal /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/DIN
 add wave -noupdate -divider READ
+add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/RD_CLK
 add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/RD_EN
 add wave -noupdate /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/EMPTY
 add wave -noupdate -radix hexadecimal /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/DOUT

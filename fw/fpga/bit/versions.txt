@@ -1,0 +1,4 @@
+Date			Description
+=============================================================
+06-03-19 14h29		131k FWFT   FIFO @ 5KHz/62KHz write/read; GTX OK; GBT TBD
+06-03-19 15h04		131k normal FIFO @ 5KHz/62KHz write/read; GTX OK; GBT TBD

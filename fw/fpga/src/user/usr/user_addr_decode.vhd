@@ -13,6 +13,10 @@ end user_addr_decode;
 
 package body user_addr_decode is
 
+
+
+
+
 	function user_ipb_addr_sel(signal addr : in std_logic_vector(31 downto 0)) return integer is
 		variable sel : integer;
 	begin
@@ -20,7 +24,7 @@ package body user_addr_decode is
 		if    std_match(addr, "01000000000000000000000000------") then  	sel := user_ipb_stat_regs;
 		elsif std_match(addr, "01000000000000000000000001------") then  	sel := user_ipb_ctrl_regs;
 		elsif std_match(addr, "01000000000000000000000010000000") then  	sel := user_ipb_fifo;
---		elsif std_match(addr, "01000000000000000000000100000000") then		sel := user_ipb_timer; -- xx
+		elsif std_match(addr, "010000001011000-----------------") then 		sel := user_ipb_slow_control;
 		--              addr, "1-------------------------------" is reserved (wishbone fabric)
 		else	
 			sel := 99;

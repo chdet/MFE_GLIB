@@ -42,8 +42,9 @@ LIBRARY XilinxCoreLib;
 -- synthesis translate_on
 ENTITY fifo_1 IS
   PORT (
-    clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
+    wr_clk : IN STD_LOGIC;
+    rd_clk : IN STD_LOGIC;
     din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
@@ -61,8 +62,9 @@ ARCHITECTURE fifo_1_a OF fifo_1 IS
 -- synthesis translate_off
 COMPONENT wrapped_fifo_1
   PORT (
-    clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
+    wr_clk : IN STD_LOGIC;
+    rd_clk : IN STD_LOGIC;
     din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
@@ -102,7 +104,7 @@ END COMPONENT;
       c_axis_tstrb_width => 4,
       c_axis_tuser_width => 4,
       c_axis_type => 0,
-      c_common_clock => 1,
+      c_common_clock => 0,
       c_count_type => 0,
       c_data_count_width => 17,
       c_default_value => "BlankString",
@@ -185,17 +187,17 @@ END COMPONENT;
       c_msgon_val => 1,
       c_optimization_mode => 0,
       c_overflow_low => 0,
-      c_preload_latency => 0,
-      c_preload_regs => 1,
+      c_preload_latency => 1,
+      c_preload_regs => 0,
       c_prim_fifo_type => "8kx4",
-      c_prog_empty_thresh_assert_val => 4,
+      c_prog_empty_thresh_assert_val => 5,
       c_prog_empty_thresh_assert_val_axis => 1022,
       c_prog_empty_thresh_assert_val_rach => 1022,
       c_prog_empty_thresh_assert_val_rdch => 1022,
       c_prog_empty_thresh_assert_val_wach => 1022,
       c_prog_empty_thresh_assert_val_wdch => 1022,
       c_prog_empty_thresh_assert_val_wrch => 1022,
-      c_prog_empty_thresh_negate_val => 5,
+      c_prog_empty_thresh_negate_val => 6,
       c_prog_empty_type => 0,
       c_prog_empty_type_axis => 0,
       c_prog_empty_type_rach => 0,
@@ -203,14 +205,14 @@ END COMPONENT;
       c_prog_empty_type_wach => 0,
       c_prog_empty_type_wdch => 0,
       c_prog_empty_type_wrch => 0,
-      c_prog_full_thresh_assert_val => 131086,
+      c_prog_full_thresh_assert_val => 131061,
       c_prog_full_thresh_assert_val_axis => 1023,
       c_prog_full_thresh_assert_val_rach => 1023,
       c_prog_full_thresh_assert_val_rdch => 1023,
       c_prog_full_thresh_assert_val_wach => 1023,
       c_prog_full_thresh_assert_val_wdch => 1023,
       c_prog_full_thresh_assert_val_wrch => 1023,
-      c_prog_full_thresh_negate_val => 131085,
+      c_prog_full_thresh_negate_val => 131060,
       c_prog_full_type => 0,
       c_prog_full_type_axis => 0,
       c_prog_full_type_rach => 0,
@@ -221,7 +223,7 @@ END COMPONENT;
       c_rach_type => 0,
       c_rd_data_count_width => 17,
       c_rd_depth => 131072,
-      c_rd_freq => 1,
+      c_rd_freq => 62,
       c_rd_pntr_width => 17,
       c_rdch_type => 0,
       c_reg_slice_mode_axis => 0,
@@ -258,7 +260,7 @@ END COMPONENT;
       c_wr_depth_wach => 16,
       c_wr_depth_wdch => 1024,
       c_wr_depth_wrch => 16,
-      c_wr_freq => 1,
+      c_wr_freq => 5,
       c_wr_pntr_width => 17,
       c_wr_pntr_width_axis => 10,
       c_wr_pntr_width_rach => 4,
@@ -274,8 +276,9 @@ BEGIN
 -- synthesis translate_off
 U0 : wrapped_fifo_1
   PORT MAP (
-    clk => clk,
     rst => rst,
+    wr_clk => wr_clk,
+    rd_clk => rd_clk,
     din => din,
     wr_en => wr_en,
     rd_en => rd_en,

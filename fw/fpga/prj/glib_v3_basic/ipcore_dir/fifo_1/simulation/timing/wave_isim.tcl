@@ -56,10 +56,11 @@
 #--------------------------------------------------------------------------------
 wcfg new
 isim set radix hex
-wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/CLK
 wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/RST
+wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/WR_CLK
 wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/WR_EN
 wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/FULL
+wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/RD_CLK
 wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/RD_EN
 wave add /fifo_1_tb/fifo_1_synth_inst/fifo_1_inst/EMPTY
 run all

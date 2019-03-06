@@ -1,7 +1,7 @@
-Release 14.7 - reportgen P.20131013 (lin64)
+Release 14.7 - reportgen P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Mar  5 19:15:34 2019
+Wed Mar 06 14:55:03 2019
 
 
 
@@ -159,34 +159,32 @@ Clock-Region: <CLOCKREGION_X0Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/glib_pll_clkout_31_25_b
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |      8 |system/glib_pll_clkout_31_25_c
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    178 |system/sram1_if/bistClk_from_sramInterfaceIoControl
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |      8 |system/glib_pll_clkout_31_25_b
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |     16 |system/glib_pll_clkout_31_25_c
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    175 |system/sram1_if/bistClk_from_sramInterfaceIoControl
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |user_clk125_2_bufg
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1156 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    929 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |   1347 | Total 
+      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |   1129 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 15
+Number of local clocks in this region: 13
 List of local clocks in this region:
-   system/i2c_s/reset_regs_i[6][0]_AND_775_o driven by SLICE_X38Y33 
-   system/i2c_s/reset_regs_i[6][1]_AND_773_o driven by SLICE_X31Y35 
-   system/i2c_s/reset_regs_i[6][2]_AND_771_o driven by SLICE_X32Y34 
-   system/i2c_s/reset_regs_i[6][3]_AND_769_o driven by SLICE_X36Y33 
+   system/i2c_s/reset_regs_i[6][0]_AND_775_o driven by SLICE_X42Y38 
+   system/i2c_s/reset_regs_i[6][1]_AND_773_o driven by SLICE_X39Y37 
+   system/i2c_s/reset_regs_i[6][2]_AND_771_o driven by SLICE_X42Y36 
+   system/i2c_s/reset_regs_i[6][3]_AND_769_o driven by SLICE_X39Y37 
+   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X43Y39 
    usr/i_ttc_clocks/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y0 
-   usr/i_ttc_clocks/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X54Y9 
-   system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o driven by SLICE_X34Y40 
-   system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o driven by SLICE_X32Y38 
-   system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o driven by SLICE_X32Y38 
-   system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o driven by SLICE_X33Y39 
-   system/i2c_s/reset_regs_i[10][0]_AND_839_o driven by SLICE_X36Y31 
-   system/i2c_s/reset_regs_i[10][1]_AND_837_o driven by SLICE_X30Y32 
-   system/i2c_s/reset_regs_i[10][2]_AND_835_o driven by SLICE_X32Y33 
-   MMCM_PHASE_CALIBRATION_ML_LUT2_28_ML_NEW_CLK driven by SLICE_X55Y9 
-   system/i2c_s/reset_regs_i[10][3]_AND_833_o driven by SLICE_X33Y34 
+   usr/i_ttc_clocks/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X54Y8 
+   system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o driven by SLICE_X38Y39 
+   system/i2c_s/reset_regs_i[10][0]_AND_839_o driven by SLICE_X42Y35 
+   system/i2c_s/reset_regs_i[10][1]_AND_837_o driven by SLICE_X36Y37 
+   system/i2c_s/reset_regs_i[10][2]_AND_835_o driven by SLICE_X36Y36 
+   system/i2c_s/reset_regs_i[10][3]_AND_833_o driven by SLICE_X38Y35 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_28_ML_NEW_CLK driven by SLICE_X55Y8 
 
 
 Clock-Region: <CLOCKREGION_X1Y0> 
@@ -199,15 +197,15 @@ Clock-Region: <CLOCKREGION_X1Y0>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     64 |     32 |system/glib_pll_clkout_31_25_b
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     56 |     28 |system/glib_pll_clkout_31_25_c
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     56 |     28 |system/glib_pll_clkout_31_25_b
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     40 |     20 |system/glib_pll_clkout_31_25_c
       0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram1_if/bistClk_from_sramInterfaceIoControl
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    811 |user_ipb_clk
-      1 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    107 |usr/mgt_gbt_rx_word_clk
-      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    181 |usr/mgt_gbt_tx_word_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     95 |usr/ttc_clcks_clk_40
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    878 |user_ipb_clk
+      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    107 |usr/mgt_gbt_rx_word_clk
+      1 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    181 |usr/mgt_gbt_tx_word_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     88 |usr/ttc_clcks_clk_40
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      1 |      0 |      2 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |    120 |   1254 | Total 
+      1 |      0 |      2 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     96 |   1302 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
@@ -228,28 +226,30 @@ Clock-Region: <CLOCKREGION_X0Y1>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    259 |system/sram1_if/bistClk_from_sramInterfaceIoControl
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    108 |system/sram2_if/bistClk_from_sramInterfaceIoControl
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    262 |system/sram1_if/bistClk_from_sramInterfaceIoControl
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     85 |system/sram2_if/bistClk_from_sramInterfaceIoControl
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      2 |user_clk125_2_bufg
-      7 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     38 |   1027 |user_ipb_clk
+     11 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     26 |   1095 |user_ipb_clk
       0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |usr/mgt_gbt_rx_word_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |usr/ttc_clcks_clk_40
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      3 |usr/ttc_clcks_clk_40
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      7 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     40 |   1399 | Total 
+     11 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     28 |   1448 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 8
+Number of local clocks in this region: 10
 List of local clocks in this region:
-   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X38Y40 
-   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X36Y40 
-   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X38Y40 
-   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X37Y39 
-   system/spi/reset_i_cpol_i_AND_936_o driven by SLICE_X12Y48 
+   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X43Y43 
+   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X46Y40 
+   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X44Y42 
+   system/spi/reset_i_cpol_i_AND_936_o driven by SLICE_X14Y49 
    system/pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y1 
-   system/pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X44Y54 
-   MMCM_PHASE_CALIBRATION_ML_LUT2_20_ML_NEW_CLK driven by SLICE_X42Y60 
+   system/pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X47Y49 
+   system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o driven by SLICE_X42Y40 
+   system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o driven by SLICE_X38Y40 
+   system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o driven by SLICE_X37Y40 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_20_ML_NEW_CLK driven by SLICE_X45Y59 
 
 
 Clock-Region: <CLOCKREGION_X1Y1> 
@@ -262,20 +262,18 @@ Clock-Region: <CLOCKREGION_X1Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |     82 |user_ipb_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |usr/ttc_clcks_clk_40
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     34 |    280 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |usr/ttc_clcks_clk_40
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |     84 | Total 
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     34 |    288 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 2
 List of regional clocks in this region:
-   system/mac_clk<2> driven by BUFR_X2Y5 
    system/mac_clk<0> driven by BUFR_X2Y4 
+   system/mac_clk<2> driven by BUFR_X2Y5 
 
-Number of local clocks in this region: 1
-List of local clocks in this region:
-   usr/usrclk_5 driven by SLICE_X66Y161 
+Number of local clocks in this region: 0
 
 
 Clock-Region: <CLOCKREGION_X0Y2> 
@@ -291,24 +289,24 @@ Clock-Region: <CLOCKREGION_X0Y2>
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/gbt_phase_monitoring/ttclk_pll/clkfbout_buf
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |system/glib_pll_clkout_31_25_a
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |system/glib_pll_clkout_31_25_d_inv
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    306 |system/sram2_if/bistClk_from_sramInterfaceIoControl
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    352 |system/sram2_if/bistClk_from_sramInterfaceIoControl
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/xpoint1_clk1
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     34 |user_clk125_2_bufg
-     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |    455 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     60 |user_clk125_2_bufg
+     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    373 |user_ipb_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |usr/i_ttc_clocks/clkout0
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |usr/i_ttc_clocks/clkout4
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     24 |      2 |      0 |      0 |      0 |      0 |      0 |      4 |      0 |      0 |      0 |     20 |    795 | Total 
+     24 |      2 |      0 |      0 |      0 |      0 |      0 |      4 |      0 |      0 |      0 |     12 |    785 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
 Number of local clocks in this region: 4
 List of local clocks in this region:
-   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X42Y112 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X42Y113 
    system/gbt_phase_monitoring/ttclk_pll/clkfbout driven by MMCM_ADV_X0Y5 
    system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y5 
-   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X42Y112 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X43Y112 
 
 
 Clock-Region: <CLOCKREGION_X1Y2> 
@@ -322,19 +320,19 @@ Clock-Region: <CLOCKREGION_X1Y2>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     74 |    106 |system/gbt_phase_monitoring/ttclk_x6
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     72 |    106 |system/gbt_phase_monitoring/ttclk_x6
       0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram2_if/bistClk_from_sramInterfaceIoControl
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |      5 |user_clk125_2_bufg
-     17 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     67 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      5 |user_clk125_2_bufg
+     19 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    102 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     17 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     80 |    180 | Total 
+     19 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     72 |    215 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 4
 List of regional clocks in this region:
-   system/mac_clk<2> driven by BUFR_X2Y5 
    system/mac_clk<0> driven by BUFR_X2Y4 
+   system/mac_clk<2> driven by BUFR_X2Y5 
    system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y6 
    system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y7 
 
@@ -344,7 +342,7 @@ List of local clocks in this region:
 
 
 Clock-Region: <CLOCKREGION_X0Y3> 
- key resource utilizations (used/available): global-clocks - 5/12 ;
+ key resource utilizations (used/available): global-clocks - 3/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -354,12 +352,10 @@ Clock-Region: <CLOCKREGION_X0Y3>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     23 |system/sram2_if/bistClk_from_sramInterfaceIoControl
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     26 |user_clk125_2_bufg
-     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     63 |user_ipb_clk
+     21 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     15 |user_ipb_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |usr/user_mmcm/clkout0
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     24 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      2 |    134 | Total 
+     21 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |     37 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
@@ -377,19 +373,17 @@ Clock-Region: <CLOCKREGION_X1Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     27 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     21 |user_ipb_clk
+     25 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     23 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     27 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     21 | Total 
+     25 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     23 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 2
 List of regional clocks in this region:
-   system/mac_clk<2> driven by BUFR_X2Y5 
    system/mac_clk<0> driven by BUFR_X2Y4 
+   system/mac_clk<2> driven by BUFR_X2Y5 
 
-Number of local clocks in this region: 1
-List of local clocks in this region:
-   usr/usrclk_5 driven by SLICE_X66Y161 
+Number of local clocks in this region: 0
 
 
 Clock-Region: <CLOCKREGION_X0Y4> 
@@ -402,18 +396,18 @@ Clock-Region: <CLOCKREGION_X0Y4>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |user_ipb_clk
+     23 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |user_ipb_clk
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |usr/user_mmcm/clkfbout_buf
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     24 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 | Total 
+     23 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
 Number of local clocks in this region: 4
 List of local clocks in this region:
-   usr/usrclk_5 driven by SLICE_X66Y161 
-   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X54Y188 
+   usr/usrclk_5 driven by SLICE_X58Y161 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X52Y189 
    usr/user_mmcm/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X54Y189 
    usr/user_mmcm/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y9 
 
@@ -438,7 +432,7 @@ Number of regional clocks in this region: 0
 
 Number of local clocks in this region: 1
 List of local clocks in this region:
-   usr/usrclk_5 driven by SLICE_X66Y161 
+   usr/usrclk_5 driven by SLICE_X58Y161 
 
 
 

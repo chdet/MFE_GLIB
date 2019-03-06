@@ -84,7 +84,8 @@ ENTITY fifo_1_synth IS
 	   TB_SEED        : INTEGER := 1
 	 );
   PORT(
-	CLK        :  IN  STD_LOGIC;
+	WR_CLK     :  IN  STD_LOGIC;
+	RD_CLK     :  IN  STD_LOGIC;
         RESET      :  IN  STD_LOGIC;
         SIM_DONE   :  OUT STD_LOGIC;
         STATUS     :  OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
@@ -94,7 +95,8 @@ END ENTITY;
 ARCHITECTURE simulation_arch OF fifo_1_synth IS
 
     -- FIFO interface signal declarations
-    SIGNAL clk_i	                  :   STD_LOGIC;
+    SIGNAL wr_clk_i                       :   STD_LOGIC;
+    SIGNAL rd_clk_i                       :   STD_LOGIC;
     SIGNAL wr_ack                         :   STD_LOGIC;
     SIGNAL valid                          :   STD_LOGIC;
     SIGNAL rst	                          :   STD_LOGIC;
@@ -123,6 +125,9 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
     SIGNAL rst_s_wr3                      :   STD_LOGIC := '0';
     SIGNAL rst_s_rd                       :   STD_LOGIC := '0';
     SIGNAL reset_en                       :   STD_LOGIC := '0';
+    SIGNAL rst_async_wr1                  :   STD_LOGIC := '0'; 
+    SIGNAL rst_async_wr2                  :   STD_LOGIC := '0'; 
+    SIGNAL rst_async_wr3                  :   STD_LOGIC := '0'; 
     SIGNAL rst_async_rd1                  :   STD_LOGIC := '0'; 
     SIGNAL rst_async_rd2                  :   STD_LOGIC := '0'; 
     SIGNAL rst_async_rd3                  :   STD_LOGIC := '0'; 
@@ -131,20 +136,33 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
  BEGIN  
 
    ---- Reset generation logic -----
-   rst_int_wr          <= rst_async_rd3 OR rst_s_rd;
+   rst_int_wr          <= rst_async_wr3 OR rst_s_wr3;
    rst_int_rd          <= rst_async_rd3 OR rst_s_rd;
 
    --Testbench reset synchronization
-   PROCESS(clk_i,RESET)
+   PROCESS(rd_clk_i,RESET)
    BEGIN
      IF(RESET = '1') THEN
        rst_async_rd1    <= '1';
        rst_async_rd2    <= '1';
        rst_async_rd3    <= '1';
-     ELSIF(clk_i'event AND clk_i='1') THEN
+     ELSIF(rd_clk_i'event AND rd_clk_i='1') THEN
        rst_async_rd1    <= RESET;
        rst_async_rd2    <= rst_async_rd1;
        rst_async_rd3    <= rst_async_rd2;
+     END IF;
+   END PROCESS;
+
+   PROCESS(wr_clk_i,RESET)
+   BEGIN
+     IF(RESET = '1') THEN
+       rst_async_wr1  <= '1';
+       rst_async_wr2  <= '1';
+       rst_async_wr3  <= '1';
+     ELSIF(wr_clk_i'event AND wr_clk_i='1') THEN
+       rst_async_wr1  <= RESET;
+       rst_async_wr2  <= rst_async_wr1;
+       rst_async_wr3  <= rst_async_wr2;
      END IF;
    END PROCESS;
    rst_s_wr3   <= '0';
@@ -152,7 +170,8 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
    ------------------
    
    ---- Clock buffers for testbench ----
-  clk_i <= CLK;
+  wr_clk_i <= WR_CLK;
+  rd_clk_i <= RD_CLK;
    ------------------
      
     rst                       <=   RESET OR rst_s_rd AFTER 12 ns;
@@ -172,7 +191,7 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
                  )
       PORT MAP (  -- Write Port
                 RESET             => rst_int_wr,
-                WR_CLK            => clk_i,
+                WR_CLK            => wr_clk_i,
 		PRC_WR_EN         => prc_we_i,
                 FULL              => full_i,
                 WR_EN             => wr_en_i,
@@ -189,7 +208,7 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
 	        )
      PORT MAP(
               RESET               => rst_int_rd,
-              RD_CLK              => clk_i,
+              RD_CLK              => rd_clk_i,
 	      PRC_RD_EN           => prc_re_i,
               RD_EN               => rd_en_i,
 	      EMPTY               => empty_i,
@@ -214,8 +233,8 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
               RESET_WR            => rst_int_wr,
               RESET_RD            => rst_int_rd,
 	      RESET_EN            => reset_en,
-              WR_CLK              => clk_i,
-              RD_CLK              => clk_i,
+              WR_CLK              => wr_clk_i,
+              RD_CLK              => rd_clk_i,
               PRC_WR_EN           => prc_we_i,
               PRC_RD_EN           => prc_re_i,
 	      FULL                => full_i,
@@ -235,7 +254,8 @@ ARCHITECTURE simulation_arch OF fifo_1_synth IS
 
   fifo_1_inst : fifo_1_exdes 
     PORT MAP (
-           CLK                       => clk_i,
+           WR_CLK                    => wr_clk_i,
+           RD_CLK                    => rd_clk_i,
            WR_ACK                    => wr_ack,
            VALID                     => valid,
            RST                       => rst,
