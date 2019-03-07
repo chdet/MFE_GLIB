@@ -325,7 +325,7 @@ begin
     );
 
 	--===========================================--
-	ipb_user_fifo_inst : entity work.ipb_user_fifo_2
+	ipb_user_fifo_inst : entity work.ipb_user_fifo
 	--===========================================--
 	port map (
 	ipbclk        		=> ipb_clk_i,
@@ -613,7 +613,7 @@ begin
             ipb_clk_i           => ipb_clk_i,
             ipb_miso_o          => ipb_miso_o(user_ipb_slow_control),
             ipb_mosi_i          => ipb_mosi_i(user_ipb_slow_control)
-
+        );
 	--===========================================--
 
 
