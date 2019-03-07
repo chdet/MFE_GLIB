@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="104" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 27: Cannot find &lt;<arg fmt="%s" index="1">ipbus</arg>&gt; in library &lt;<arg fmt="%s" index="2">work</arg>&gt;. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="104" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 28: Cannot find &lt;<arg fmt="%s" index="1">system_package</arg>&gt; in library &lt;<arg fmt="%s" index="2">work</arg>&gt;. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 32: Unit &lt;<arg fmt="%s" index="1">ipb_user_fifo_2_tb</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 38: Entity &lt;<arg fmt="%s" index="1">ipb_user_fifo_2_tb</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 41: &lt;<arg fmt="%s" index="1">natural</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 44: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 45: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 46: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 47: &lt;<arg fmt="%s" index="1">ipb_wbus</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 48: &lt;<arg fmt="%s" index="1">ipb_rbus</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 51: &lt;<arg fmt="%s" index="1">real</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 52: &lt;<arg fmt="%s" index="1">real</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 61: &lt;<arg fmt="%s" index="1">ipbclk</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 62: &lt;<arg fmt="%s" index="1">c_ipbclk_period</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 63: &lt;<arg fmt="%s" index="1">ipbclk</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 64: &lt;<arg fmt="%s" index="1">c_ipbclk_period</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 69: &lt;<arg fmt="%s" index="1">ipbclk</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 70: &lt;<arg fmt="%s" index="1">c_usrclk_period</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/../../src/user/usr/ipb_user_fifo_tb.vhd" Line 71: &lt;<arg fmt="%s" index="1">ipbclk</arg>&gt; is not declared.
+</msg>
+
+</messages>
+

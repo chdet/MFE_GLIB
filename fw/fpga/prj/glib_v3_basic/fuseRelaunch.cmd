@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/ipb_user_fifo_2_tb_isim_translate.exe" -prj "F:/Documents/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/ipb_user_fifo_2_tb_translate.prj" "work.ipb_user_fifo_2_tb" 

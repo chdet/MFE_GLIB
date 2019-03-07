@@ -33,8 +33,9 @@ architecture rtl of ipb_user_fifo is
 	signal cnt                                                           : unsigned(31 downto 0) := (others => '0'); 
 	signal din, dout                                                     : std_logic_vector(31 downto 0); 
 	signal wr_en, rd_en, full, empty, valid, underflow, overflow, wr_ack : std_logic; 
-	
-	COMPONENT fifo_2
+	signal rd_en_samp, rd_en_samp2 : std_logic;
+
+	COMPONENT fifo_1
 		PORT (
 			rst       : IN  STD_LOGIC; 
 			wr_clk    : IN  STD_LOGIC; 
@@ -73,7 +74,7 @@ begin
 	
 	din <= std_logic_vector(cnt); 
 	
-	i_oh_rx_fifo : fifo_2
+	i_oh_rx_fifo : fifo_1
 		PORT MAP (
 			rst       => reset,
 			wr_clk    => usrclk,
@@ -107,10 +108,11 @@ begin
 		elsif rising_edge(ipbclk) then
 			--if (sel = 0) then
 			ipb_miso_o.ipb_rdata <= dout; 
-			rd_en <= ipb_mosi_i.ipb_strobe; 
-			ack <= ipb_mosi_i.ipb_strobe and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
+			rd_en <= ipb_mosi_i.ipb_strobe and not (rd_en or rd_en_samp);
+			rd_en_samp <= rd_en; 
+			ack <= rd_en_samp and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
 			-- Keeping ack tied to valid alone would empty the fifo without any request, and prevent other register reads.
-			err <= empty; 
+			err <= rd_en_samp and underflow; 
 			--else
 			--	ipb_miso_o.ipb_rdata <= (0 => overflow, others => '0'); 
 			--	ack <= ipb_mosi_i.ipb_strobe and not ack;

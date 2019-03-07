@@ -44,39 +44,39 @@ port
 	-- BANK_114(Q2):                 
 	pcie_clk_p	                        : in	  std_logic; 			  
 	pcie_clk_n	                        : in	  std_logic;			  
-	cdce_out2_p  	                     : in	  std_logic;			  
-	cdce_out2_n  	                     : in	  std_logic;			  
+	cdce_out2_p  	                    : in	  std_logic;			  
+	cdce_out2_n  	                    : in	  std_logic;			  
 	-- BANK_115(Q3):                 
 	clk125_2_i                          : in	  std_logic;		      
-	fmc1_gbtclk1_m2c_p	               : in	  std_logic;     
-	fmc1_gbtclk1_m2c_n	               : in	  std_logic;     
+	fmc1_gbtclk1_m2c_p	                : in	  std_logic;     
+	fmc1_gbtclk1_m2c_n	                : in	  std_logic;     
 	-- BANK_116(Q4):                 
-	fmc1_gbtclk0_m2c_p	               : in	  std_logic;	  
-	fmc1_gbtclk0_m2c_n	               : in	  std_logic;	  
+	fmc1_gbtclk0_m2c_p	                : in	  std_logic;	  
+	fmc1_gbtclk0_m2c_n	                : in	  std_logic;	  
 	cdce_out3_p	                        : in	  std_logic;		  
 	cdce_out3_n	                        : in	  std_logic;		    
 	--================================--
 	-- USER FABRIC CLOCKS
 	--================================--
-	xpoint1_clk3_p	                     : in	  std_logic;		   
-	xpoint1_clk3_n	                     : in	  std_logic;		   
+	xpoint1_clk3_p	                    : in	  std_logic;		   
+	xpoint1_clk3_n	                    : in	  std_logic;		   
 	------------------------------------  
 	cdce_out4_p                         : in	  std_logic;                
 	cdce_out4_n                         : in	  std_logic;              
 	------------------------------------
-	amc_tclkb_o					            : out	  std_logic;
+	amc_tclkb_o					        : out	  std_logic;
 	------------------------------------      
 	fmc1_clk0_m2c_xpoint2_p	            : in	  std_logic;
 	fmc1_clk0_m2c_xpoint2_n	            : in	  std_logic;
-	fmc1_clk1_m2c_p		               : in	  std_logic;	
-	fmc1_clk1_m2c_n		               : in	  std_logic;	
-	fmc1_clk2_bidir_p		               : in	  std_logic;	
-	fmc1_clk2_bidir_n		               : in	  std_logic;	
-	fmc1_clk3_bidir_p		               : in	  std_logic;	
-	fmc1_clk3_bidir_n		               : in	  std_logic;	
+	fmc1_clk1_m2c_p		                : in	  std_logic;	
+	fmc1_clk1_m2c_n		                : in	  std_logic;	
+	fmc1_clk2_bidir_p	                : in	  std_logic;	
+	fmc1_clk2_bidir_n	                : in	  std_logic;	
+	fmc1_clk3_bidir_p	                : in	  std_logic;	
+	fmc1_clk3_bidir_n	                : in	  std_logic;	
 	------------------------------------
-	fmc2_clk1_m2c_p	                  : in	  std_logic;		
-	fmc2_clk1_m2c_n	                  : in	  std_logic;		
+	fmc2_clk1_m2c_p	                    : in	  std_logic;		
+	fmc2_clk1_m2c_n	                    : in	  std_logic;		
 	--================================--
 	-- GBT PHASE MONITORING MGT REFCLK
 	--================================--
@@ -85,48 +85,48 @@ port
 	--================================--
 	-- AMC PORTS
 	--================================--
-	amc_port_tx_p				            : out	  std_logic_vector(1 to 15);
-	amc_port_tx_n				            : out	  std_logic_vector(1 to 15);
-	amc_port_rx_p				            : in	  std_logic_vector(1 to 15);
-	amc_port_rx_n				            : in	  std_logic_vector(1 to 15);
+	amc_port_tx_p				        : out	  std_logic_vector(1 to 15);
+	amc_port_tx_n				        : out	  std_logic_vector(1 to 15);
+	amc_port_rx_p				        : in	  std_logic_vector(1 to 15);
+	amc_port_rx_n				        : in	  std_logic_vector(1 to 15);
 	------------------------------------
 	amc_port_tx_out			            : out	  std_logic_vector(17 to 20);	
-	amc_port_tx_in				            : in	  std_logic_vector(17 to 20);		
-	amc_port_tx_de				            : out	  std_logic_vector(17 to 20);	
+	amc_port_tx_in				        : in	  std_logic_vector(17 to 20);		
+	amc_port_tx_de				        : out	  std_logic_vector(17 to 20);	
 	amc_port_rx_out			            : out	  std_logic_vector(17 to 20);	
-	amc_port_rx_in				            : in	  std_logic_vector(17 to 20);	
-	amc_port_rx_de				            : out	  std_logic_vector(17 to 20);	
+	amc_port_rx_in				        : in	  std_logic_vector(17 to 20);	
+	amc_port_rx_de				        : out	  std_logic_vector(17 to 20);	
 	--================================--
 	-- SFP QUAD
 	--================================--
-	sfp_tx_p						            : out	  std_logic_vector(1 to 4);
-	sfp_tx_n						            : out	  std_logic_vector(1 to 4);
-	sfp_rx_p						            : in	  std_logic_vector(1 to 4);
-	sfp_rx_n						            : in	  std_logic_vector(1 to 4);
-	sfp_mod_abs					            : in	  std_logic_vector(1 to 4);		
-	sfp_rxlos					            : in	  std_logic_vector(1 to 4);		
-	sfp_txfault					            : in	  std_logic_vector(1 to 4);				
+	sfp_tx_p						    : out	  std_logic_vector(1 to 4);
+	sfp_tx_n						    : out	  std_logic_vector(1 to 4);
+	sfp_rx_p						    : in	  std_logic_vector(1 to 4);
+	sfp_rx_n						    : in	  std_logic_vector(1 to 4);
+	sfp_mod_abs					        : in	  std_logic_vector(1 to 4);		
+	sfp_rxlos					        : in	  std_logic_vector(1 to 4);		
+	sfp_txfault					        : in	  std_logic_vector(1 to 4);				
 	--================================--
 	-- FMC1
 	--================================--
-	fmc1_tx_p					            : out	  std_logic_vector(1 to 4);
+	fmc1_tx_p					        : out	  std_logic_vector(1 to 4);
 	fmc1_tx_n                           : out	  std_logic_vector(1 to 4);
 	fmc1_rx_p                           : in	  std_logic_vector(1 to 4);
 	fmc1_rx_n                           : in	  std_logic_vector(1 to 4);
 	------------------------------------
-	fmc1_io_pin					            : inout fmc_io_pin_type;
+	fmc1_io_pin					        : inout fmc_io_pin_type;
 	------------------------------------
-	fmc1_clk_c2m_p				            : out	  std_logic_vector(0 to 1);
-	fmc1_clk_c2m_n				            : out	  std_logic_vector(0 to 1);
-	fmc1_present_l				            : in	  std_logic;
+	fmc1_clk_c2m_p				        : out	  std_logic_vector(0 to 1);
+	fmc1_clk_c2m_n				        : out	  std_logic_vector(0 to 1);
+	fmc1_present_l				        : in	  std_logic;
 	--================================--
 	-- FMC2
 	--================================--
-	fmc2_io_pin					            : inout fmc_io_pin_type;
+	fmc2_io_pin					        : inout fmc_io_pin_type;
 	------------------------------------
-	fmc2_clk_c2m_p				            : out	  std_logic_vector(0 to 1);
-	fmc2_clk_c2m_n				            : out	  std_logic_vector(0 to 1);
-	fmc2_present_l				            : in	  std_logic;
+	fmc2_clk_c2m_p				        : out	  std_logic_vector(0 to 1);
+	fmc2_clk_c2m_n				        : out	  std_logic_vector(0 to 1);
+	fmc2_present_l				        : in	  std_logic;
 	--================================--      
 	-- SYSTEM GBE   
 	--================================--      
@@ -143,25 +143,25 @@ port
 	sys_pcie_mgt_refclk_o	            : out	  std_logic;	  
 	user_sys_pcie_dma_clk_i             : in	  std_logic;	  
 	------------------------------------
-	sys_pcie_amc_tx_p		               : in	  std_logic_vector(0 to 3);    
-	sys_pcie_amc_tx_n		               : in	  std_logic_vector(0 to 3);    
-	sys_pcie_amc_rx_p		               : out	  std_logic_vector(0 to 3);    
-	sys_pcie_amc_rx_n		               : out	  std_logic_vector(0 to 3);    
+	sys_pcie_amc_tx_p		            : in	  std_logic_vector(0 to 3);    
+	sys_pcie_amc_tx_n		            : in	  std_logic_vector(0 to 3);    
+	sys_pcie_amc_rx_p		            : out	  std_logic_vector(0 to 3);    
+	sys_pcie_amc_rx_n		            : out	  std_logic_vector(0 to 3);    
 	------------------------------------
-	user_sys_pcie_slv_o	               : out   R_slv_to_ezdma2;									   	
-	user_sys_pcie_slv_i	               : in    R_slv_from_ezdma2; 	   						    
+	user_sys_pcie_slv_o	                : out   R_slv_to_ezdma2;									   	
+	user_sys_pcie_slv_i	                : in    R_slv_from_ezdma2; 	   						    
 	user_sys_pcie_dma_o                 : out   R_userDma_to_ezdma2_array  (1 to 7);		   					
 	user_sys_pcie_dma_i                 : in 	  R_userDma_from_ezdma2_array(1 to 7);		   	
-	user_sys_pcie_int_o 	               : out   R_int_to_ezdma2;									   	
-	user_sys_pcie_int_i 	               : in    R_int_from_ezdma2; 								    
-	user_sys_pcie_cfg_i 	               : in	  R_cfg_from_ezdma2; 								   	
+	user_sys_pcie_int_o 	            : out   R_int_to_ezdma2;									   	
+	user_sys_pcie_int_i 	            : in    R_int_from_ezdma2; 								    
+	user_sys_pcie_cfg_i 	            : in	  R_cfg_from_ezdma2; 								   	
 	--================================--
 	-- SRAMs
 	--================================--
 	user_sram_control_o		            : out	  userSramControlR_array(1 to 2);
-	user_sram_addr_o			            : out	  array_2x21bit;
-	user_sram_wdata_o			            : out	  array_2x36bit;
-	user_sram_rdata_i			            : in 	  array_2x36bit;
+	user_sram_addr_o			        : out	  array_2x21bit;
+	user_sram_wdata_o			        : out	  array_2x36bit;
+	user_sram_rdata_i			        : in 	  array_2x36bit;
 	------------------------------------
 	sram1_bwa                           : out	  std_logic;  
 	sram1_bwb                           : out	  std_logic;  
@@ -174,35 +174,35 @@ port
 	--================================--               
 	-- CLK CIRCUITRY              
 	--================================--    
-	fpga_clkout_o	  			            : out	  std_logic;	
+	fpga_clkout_o	  			        : out	  std_logic;	
 	------------------------------------
-	sec_clk_o		                     : out	  std_logic;	
+	sec_clk_o		                    : out	  std_logic;	
 	------------------------------------
-	user_cdce_locked_i			         : in	  std_logic;
-	user_cdce_sync_done_i					: in	  std_logic;
+	user_cdce_locked_i			        : in	  std_logic;
+	user_cdce_sync_done_i		    	: in	  std_logic;
 	user_cdce_sel_o			            : out	  std_logic;
-	user_cdce_sync_o			            : out	  std_logic;
+	user_cdce_sync_o			        : out	  std_logic;
 	--================================--  
 	-- USER BUS  
 	--================================--       
-	wb_miso_o				               : out	  wb_miso_bus_array(0 to number_of_wb_slaves-1);
-	wb_mosi_i				               : in 	  wb_mosi_bus_array(0 to number_of_wb_slaves-1);
+	wb_miso_o				            : out	  wb_miso_bus_array(0 to number_of_wb_slaves-1);
+	wb_mosi_i				            : in 	  wb_mosi_bus_array(0 to number_of_wb_slaves-1);
 	------------------------------------
-	ipb_clk_i				               : in 	  std_logic;
-	ipb_miso_o			                  : out	  ipb_rbus_array(0 to number_of_ipb_slaves-1);
-	ipb_mosi_i			                  : in 	  ipb_wbus_array(0 to number_of_ipb_slaves-1);   
+	ipb_clk_i				            : in 	  std_logic;
+	ipb_miso_o			                : out	  ipb_rbus_array(0 to number_of_ipb_slaves-1);
+	ipb_mosi_i			                : in 	  ipb_wbus_array(0 to number_of_ipb_slaves-1);   
 	--================================--
 	-- VARIOUS
 	--================================--
-	reset_i						            : in	  std_logic;	    
+	reset_i						        : in	  std_logic;	    
 	user_clk125_i                  		: in	  std_logic;       
 	user_clk200_i                  		: in	  std_logic;       
 	------------------------------------   
-	sn			                           : in    std_logic_vector(7 downto 0);	   
+	sn			                        : in    std_logic_vector(7 downto 0);	   
 	------------------------------------   
-	amc_slot_i									: in    std_logic_vector( 3 downto 0);
-	mac_addr_o 					            : out   std_logic_vector(47 downto 0);
-	ip_addr_o					            : out   std_logic_vector(31 downto 0);
+	amc_slot_i						    : in    std_logic_vector( 3 downto 0);
+	mac_addr_o 					        : out   std_logic_vector(47 downto 0);
+	ip_addr_o					        : out   std_logic_vector(31 downto 0);
 	------------------------------------	
 	user_v6_led_o                       : out	  std_logic_vector(1 to 2)
 	);                         	
@@ -286,6 +286,16 @@ architecture user_logic_arch of user_logic_gbt is
     signal gbt_ready_wrapper            : std_logic_vector(2 downto 0);
 	------------------------------------
 
+	--== GEM Loader ==--
+    signal to_gem_loader : t_to_gem_loader;
+    signal from_gem_loader : t_from_gem_loader;
+    
+    signal sram_rdata : std_logic_vector(35 downto 0);
+    signal sram_addr  : std_logic_vector(20 downto 0);
+    signal sram_cs    : std_logic;
+	------------------------------------
+
+
 begin
 
 	--#############################--
@@ -307,13 +317,6 @@ begin
 	--## USER LOGIC              ##--
 	--#############################--
 
-	CLK_DIV2 : process (usrclk_10)
-	begin
-		if rising_edge(usrclk_10) then
-				usrclk_5 <= not(usrclk_5);
-		end if;
-	end process CLK_DIV2;
-
 	--===========================================--
 	user_mmcm : entity work.clk_wiz_10MHZ
 	--===========================================--
@@ -329,7 +332,7 @@ begin
 	--===========================================--
 	port map (
 	ipbclk        		=> ipb_clk_i,
-	usrclk     	  		=> usrclk_5,
+	usrclk     	  		=> usrclk_10,
 	reset      	  		=> reset_i,
 	ipb_mosi_i 	  		=> ipb_mosi_i(user_ipb_fifo),
 	ipb_miso_o 	  		=> ipb_miso_o(user_ipb_fifo)
@@ -543,12 +546,12 @@ begin
 	gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
 	gtx_status(7) <= '1';
 
-    gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
+ 	gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
 	gbt_tx_data_wrapper(0)		<= gbt_tx_data(0);     
 	gbt_link_status_wrapper(0)	<= gbt_link_status(0);
-	gbt_ic_tx_data_wrapper(0)	<= gbt_ic_tx_data(0); 
-	gbt_ic_rx_data_wrapper(0)	<= gbt_ic_rx_data(0); 
-	gbt_ready_wrapper			<= gbt_ready(0) & "00";      
+	--gbt_ic_tx_data_wrapper(0)	<= gbt_ic_tx_data(0); 
+	--gbt_ic_rx_data_wrapper(0)	<= gbt_ic_rx_data(0); 
+	--gbt_ready_wrapper			<= gbt_ready(0) & "00";      
 
 	i_gbt_link_mux : entity work.gbt_link_mux(gbt_link_mux_ge21)
 	    generic map(
@@ -616,6 +619,58 @@ begin
         );
 	--===========================================--
 
+    --===========================--
+    --    OH FPGA programming    --
+    --===========================--
+
+    i_oh_fpga_loader : entity work.oh_fpga_loader
+        port map(
+            reset_i           => reset_i,
+            gbt_clk_i         => ttc_clcks.clk_40,
+            loader_clk_i      => ttc_clcks.clk_80,
+            to_gem_loader_o   => to_gem_loader,
+            from_gem_loader_i => from_gem_loader,
+            elink_data_o      => promless_tx_data,
+            hard_reset_i      => ttc_cmd.hard_reset
+        );
+        
+    --================================--
+
+	--================--
+    --== GEM loader ==--
+    --================--
+
+    sram1_bwa <= '0';
+    sram1_bwb <= '0';
+    sram1_bwc <= '0';
+    sram1_bwd <= '0';
+
+    user_sram_addr_o(1)  <= sram_addr;
+    user_sram_wdata_o(1) <= (others => '0');
+    sram_rdata           <= user_sram_rdata_i(1);
+    user_sram_control_o(1).reset       <= '0';
+    user_sram_control_o(1).clk         <= to_gem_loader.clk;
+    user_sram_control_o(1).writeEnable <= '0';
+    user_sram_control_o(1).cs          <= sram_cs;
+
+    i_gem_loader : entity work.gem_loader
+    port map ( 
+        clk_i => to_gem_loader.clk,
+        en_i  => to_gem_loader.en,
+        
+        sram_rdata_i => sram_rdata(31 downto 0),
+        sram_addr_o  => sram_addr,
+        sram_cs_o    => sram_cs,
+
+        ready_o => from_gem_loader.ready,
+        data_o  => from_gem_loader.data,
+        valid_o => from_gem_loader.valid,
+        first_o => from_gem_loader.first,
+        last_o  => from_gem_loader.last,
+        error_o => from_gem_loader.error
+    );
+
+    --===========================================--
 
     --================================--
     -- TTC  
