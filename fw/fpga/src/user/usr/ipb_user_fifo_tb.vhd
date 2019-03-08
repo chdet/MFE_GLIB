@@ -6,7 +6,7 @@
 -- Author      : User Name <user.email@user.company.com>
 -- Company     : User Company Name
 -- Created     : Thu Mar  7 19:08:56 2019
--- Last update : Thu Mar  7 19:27:34 2019
+-- Last update : Fri Mar  8 15:50:23 2019
 -- Platform    : Default Part Number
 -- Standard    : <VHDL-2008 | VHDL-2002 | VHDL-1993 | VHDL-1987>
 --------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ begin
 	-----------------------------------------------------------
 	-- Entity Under Test
 	-----------------------------------------------------------
-	DUT : entity work.ipb_user_fifo_2
+	DUT : entity work.ipb_user_fifo
 		generic map (
 			addr_width => addr_width
 		)

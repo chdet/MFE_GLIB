@@ -97,33 +97,38 @@ begin
 
 	-- FIXME: Reads of the FIFO exhibit "jumps", usually by 3. With FWFT, there are additional jumps of arbitrary length
 	
-	--=============================--
-	process(reset, ipbclk)
-	--=============================--
-	begin
-		if reset='1' then
-			ack <= '0'; 
-			err <= '0';
-			rd_en <= '0';
-		elsif rising_edge(ipbclk) then
-			--if (sel = 0) then
-			ipb_miso_o.ipb_rdata <= dout; 
-			rd_en <= ipb_mosi_i.ipb_strobe and not (rd_en or rd_en_samp);
-			rd_en_samp <= rd_en; 
-			ack <= rd_en_samp and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
-			-- Keeping ack tied to valid alone would empty the fifo without any request, and prevent other register reads.
-			err <= rd_en_samp and underflow; 
-			--else
-			--	ipb_miso_o.ipb_rdata <= (0 => overflow, others => '0'); 
-			--	ack <= ipb_mosi_i.ipb_strobe and not ack;
-			--	err <= '0'; 
-			--end if;
+	----=============================--
+	--process(reset, ipbclk)
+	----=============================--
+	--begin
+	--	if reset='1' then
+	--		ack <= '0'; 
+	--		err <= '0';
+	--		rd_en <= '0';
+	--	elsif rising_edge(ipbclk) then
+	--		--if (sel = 0) then
+	--		ipb_miso_o.ipb_rdata <= dout; 
+	--		rd_en <= ipb_mosi_i.ipb_strobe and not (rd_en or rd_en_samp);
+	--		rd_en_samp <= rd_en; 
+	--		ack <= rd_en_samp and valid; -- in FWFT mode, the valid flag will be high even when rd_en is low.
+	--		-- Keeping ack tied to valid alone would empty the fifo without any request, and prevent other register reads.
+	--		err <= rd_en_samp and underflow; 
+	--		--else
+	--		--	ipb_miso_o.ipb_rdata <= (0 => overflow, others => '0'); 
+	--		--	ack <= ipb_mosi_i.ipb_strobe and not ack;
+	--		--	err <= '0'; 
+	--		--end if;
 			
 			
-		end if; 
-	end process; 
+	--	end if; 
+	--end process; 
 	
-	ipb_miso_o.ipb_ack <= ack; 
-	ipb_miso_o.ipb_err <= err; 
+	ipb_miso_o.ipb_rdata <= dout; 
+	rd_en <= ipb_mosi_i.ipb_strobe;
+	ipb_miso_o.ipb_ack <= ipb_mosi_i.ipb_strobe and valid;
+	ipb_miso_o.ipb_err <= ipb_mosi_i.ipb_strobe and underflow; 
+
+	--ipb_miso_o.ipb_ack <= ack; 
+	--ipb_miso_o.ipb_err <= err; 
 	
 end rtl;
