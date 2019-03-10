@@ -60,18 +60,13 @@ begin
 	--=============================--
 	begin
 		if reset='1' then
-			wr_en <= '0'; 
 			cnt <= (others => '0');
 		elsif rising_edge(usrclk) then
 			cnt   <= cnt + 1; 
-			if(full = '0') then
-				wr_en <= '1'; 
-			else
-				wr_en <= '0'; 
-			end if; 
 		end if; 
 	end process; 
 	
+	wr_en <= '1';
 	din <= std_logic_vector(cnt); 
 	
 	i_oh_rx_fifo : fifo_1

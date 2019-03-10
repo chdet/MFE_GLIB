@@ -14,7 +14,7 @@
 *.msd
 *.msk
 *.ncd
-*.ngc
+#*.ngc
 *.ngd
 *.ngr
 *.pad

@@ -38,4 +38,4 @@
 #NET "sfp_rx_n[1]"			   	   	LOC = AJ4			;	# MGTRXN3_112
 
 
-NET "*usr/i_gtx_single/rx_wordclk_nobuff_sig" PERIOD = 4.12 ns;
+# NET "*usr/i_gtx_single/rx_wordclk_nobuff_sig" PERIOD = 4.12 ns;

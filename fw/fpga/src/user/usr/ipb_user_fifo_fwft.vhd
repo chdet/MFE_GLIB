@@ -59,18 +59,13 @@ begin
 	--=============================--
 	begin
 		if reset='1' then
-			wr_en <= '0'; 
 			cnt <= (others => '0');
 		elsif rising_edge(usrclk) then
 			cnt   <= cnt + 1; 
-			if(full = '0') then
-				wr_en <= '1'; 
-			else
-				wr_en <= '0'; 
-			end if; 
 		end if; 
 	end process; 
 	
+	wr_en <= '1';
 	din <= std_logic_vector(cnt); 
 	
 	i_oh_rx_fifo : fifo_2
@@ -124,7 +119,7 @@ begin
 	ipb_miso_o.ipb_rdata <= dout; 
 	rd_en <= ipb_mosi_i.ipb_strobe;
 	ipb_miso_o.ipb_ack <= ipb_mosi_i.ipb_strobe and valid;
-	ipb_miso_o.ipb_err <= ipb_mosi_i.ipb_strobe and underflow; 
+	ipb_miso_o.ipb_err <= ipb_mosi_i.ipb_strobe and empty; 
 
 	--ipb_miso_o.ipb_ack <= ack; 
 	--ipb_miso_o.ipb_err <= err; 

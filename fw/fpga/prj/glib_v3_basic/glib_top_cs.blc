@@ -1,9 +1,9 @@
-Release 14.7 ngcbuild P.20131013 (nt64)
+Release 14.7 ngcbuild P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: ngcbuild.exe -dd
-C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/_ngo
--sd ipcore_dir -sd ../../src/user/modules/gbt_bank/xilinx_v6/gbt_rx/rx_dpram -sd
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngcbuild -dd
+/home/cdetemme/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/_ngo -sd
+../../src/user/modules/gbt_bank/xilinx_v6/gbt_rx/rx_dpram -sd
 ../../src/user/modules/gbt_bank/xilinx_v6/gbt_tx/tx_dpram -sd ../../ip -sd
 ../../src/system/cdce/cdce_phase_mon_v2/dpram -sd
 ../../src/system/ethernet/ipcore_dir/basex -sd
@@ -14,19 +14,13 @@ C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/_ngo
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -p
 xc6vlx130t-ff1156-1 -i
-C:\Users\Charles\Documents\Vivado\glib_v3.r3497\fw\fpga\prj\glib_v3_basic\glib_t
-op.ngc
-C:\Users\Charles\Documents\Vivado\glib_v3.r3497\fw\fpga\prj\glib_v3_basic\glib_t
-op_cs.ngc
+/home/cdetemme/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/glib_top.ngc
+/home/cdetemme/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/glib_top_cs.ngc
 
+Prepending components to an absolute path is invalid.
 Reading NGO file
-"C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/glib_
-top.ngc" ...
-Loading design module "ipcore_dir/fifo_2.ngc"...
-Loading design module
-"../../src/user/modules/gbt_bank/xilinx_v6/gbt_rx/rx_dpram/xlx_v6_rx_dpram.ngc".
-..
-Loading design module "../../ip/sync_fifo_gth_40.ngc"...
+"/home/cdetemme/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/glib_top.ngc" ...
+Loading design module "../../ip/fifo_2.ngc"...
 Loading design module "../../src/system/mem/sram/ipbus_addr_delay.ngc"...
 Loading design module
 "../../src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ngc"...
@@ -46,14 +40,12 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4519612 kilobytes
+Total memory usage is 467560 kilobytes
 
 Writing NGC file
-"C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/glib_
-top_cs.ngc" ...
-Total REAL time to NGCBUILD completion:  7 sec
+"/home/cdetemme/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/glib_top_cs.ngc" ...
+Total REAL time to NGCBUILD completion:  6 sec
 Total CPU time to NGCBUILD completion:   6 sec
 
 Writing NGCBUILD log file
-"C:/Users/Charles/Documents/Vivado/glib_v3.r3497/fw/fpga/prj/glib_v3_basic/glib_
-top_cs.blc"...
+"/home/cdetemme/Vivado/MFE_GLIB/fw/fpga/prj/glib_v3_basic/glib_top_cs.blc"...
