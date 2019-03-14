@@ -322,7 +322,7 @@ begin
 	--#############################--
 
 	--===========================================--
-	user_mmcm : entity work.clk_wiz_10MHZ
+	user_mmcm : entity work.usr_mmcm
 	--===========================================--
 	port map (
     clk240_ttc => clk240_ttc,
@@ -332,7 +332,7 @@ begin
     );
 
 	--===========================================--
-	ipb_user_fifo_inst : entity work.ipb_user_fifo
+	ipb_user_fifo_inst : entity work.ipb_user_fifo_fwft
 	--===========================================--
 	port map (
 	ipbclk        		=> ipb_clk_i,
