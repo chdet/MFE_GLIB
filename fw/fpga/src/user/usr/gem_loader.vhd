@@ -42,7 +42,8 @@ architecture behavioral of gem_loader is
     constant LATENCY   : unsigned(2 downto 0) := "101";
     signal latency_cnt : unsigned(2 downto 0);
 
-    constant BITSTREAM_SIZE : unsigned(23 downto 0) := x"53638c";
+    --constant BITSTREAM_SIZE : unsigned(23 downto 0) := x"53638c";
+    constant BITSTREAM_SIZE : unsigned(23 downto 0) := x"3FFFFF";
     signal octet_cnt        : unsigned(23 downto 0);
     
     signal data_latch : std_logic_vector(31 downto 0);

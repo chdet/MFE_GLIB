@@ -70,6 +70,8 @@ xlnx_auto_0_xdb/
 xst/
 _ngo/
 _xmsgs/
+xsim.dir/
+isim/
 
 # End of https://www.gitignore.io/api/xilinxise
 

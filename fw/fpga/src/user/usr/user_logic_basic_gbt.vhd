@@ -228,9 +228,11 @@ architecture user_logic_arch of user_logic_gbt is
     signal gtx_reset, gtx_reset_sync : std_logic;
     signal gtx_config, gtx_status, gtx_prbs_pattern, gtx_prbs_errors : std_logic_vector(31 downto 0);
 
+    signal reprogram_oh : std_logic := '0';
+
     --== Slow control ==--
     signal vfat3_sc_status              : t_vfat_slow_control_status; 
-    signal ttc_cmd              : t_ttc_cmds;
+    --signal ttc_cmd              : t_ttc_cmds;
 	------------------------------------
 
     --== GTX <-> GBT ==--
@@ -295,6 +297,8 @@ architecture user_logic_arch of user_logic_gbt is
     signal sram_cs    : std_logic;
 	------------------------------------
 
+	attribute dont_touch : string;
+	attribute dont_touch of from_gem_loader : signal is "true"; 
 
 begin
 
@@ -352,6 +356,9 @@ begin
 	);
 	--===========================================--
 
+	stat_reg(0)			<= gtx_status;
+	stat_reg(1) 		<= gtx_prbs_errors;
+
 	--===========================================--
 	ctrl_regs_inst: entity work.ipb_user_control_regs
 	--===========================================--
@@ -365,11 +372,19 @@ begin
 	);
 	--===========================================--
 
+	gtx_config 			<= ctrl_reg(0);
+	gtx_reset 			<= ctrl_reg(1)(0);
+	gtx_reset_sync 		<= ctrl_reg(1)(1);
+	gbt_manual_reset 	<= ctrl_reg(1)(2);
+	gtx_prbs_pattern 	<= ctrl_reg(2);
+    reprogram_oh 		<= ctrl_reg(3)(0);
+
 	--===========================================--
 	-- register mapping
 	--===========================================--
 	led1 			<= gtx_status(2);
-	led2 			<= gbt_link_status(0).gbt_rx_ready;
+	--led2 			<= gbt_link_status(0).gbt_rx_ready;
+	led2			<= gbt_ready_wrapper(0);
 	--===========================================--
 
 	--===========================================--
@@ -378,6 +393,23 @@ begin
 	user_v6_led_o(1) <= led1;
 	user_v6_led_o(2) <= led2;
 	--===========================================--
+
+	--================================--
+    -- Power-on reset  
+    --================================--
+    
+    process(ttc_clcks.clk_40) -- NOTE: using TTC clock, no nothing will work if there's no TTC clock
+        variable countdown : integer := 40_000_000; -- 1s - probably way too long, but ok for now (this is only used after powerup)
+    begin
+        if (rising_edge(ttc_clcks.clk_40)) then
+            if (countdown > 0) then
+              reset_pwrup <= '1';
+              countdown := countdown - 1;
+            else
+              reset_pwrup <= '0';
+            end if;
+        end if;
+    end process;   
 
     --=========--
     --== TTC ==--
@@ -424,13 +456,6 @@ begin
 	--    GTX   --
 	--==========--
 
-	stat_reg(0)			<= gtx_status;
-	gtx_config 			<= ctrl_reg(0);
-	gtx_reset 			<= ctrl_reg(1)(0);
-	gtx_reset_sync 		<= ctrl_reg(1)(1);
-	gtx_prbs_pattern 	<= ctrl_reg(2);
-	stat_reg(1) 		<= gtx_prbs_errors;
-
 	i_ibufds_gtxe1 : ibufds_gtxe1
 	port map(
 	o       => mgtclk,
@@ -449,8 +474,8 @@ begin
 		mgt_tx_p_o              => sfp_tx_p(4),
 		mgt_tx_n_o              => sfp_tx_n(4),
 
-		rx_reset_i              => gtx_reset,
-		tx_reset_i              => gtx_reset,
+		rx_reset_i              => gtx_reset or reset_pwrup,
+		tx_reset_i              => gtx_reset or reset_pwrup,
 		rx_sync_reset_i         => gtx_reset_sync,
 		tx_sync_reset_i         => gtx_reset_sync,
 
@@ -498,7 +523,6 @@ begin
 	--    GBT   --
 	--==========--
 
-	gbt_manual_reset <= ctrl_reg(1)(2);
 
 	i_gbt : entity work.gbt
 	    generic map(
@@ -510,7 +534,7 @@ begin
 	        RX_ENCODING     => 0
 	    )
 	    port map(
-	        reset_i                     => reset_i,
+	        reset_i                     => reset_i or reset_pwrup,
 	        cnt_reset_i                 => gbt_manual_reset,
 
 	        tx_frame_clk_i              => ttc_clcks.clk_40,
@@ -544,10 +568,11 @@ begin
 	    );
 
 	gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
-	gtx_status(7) <= '1';
+	gtx_status(7) <= gbt_ready_wrapper(0);
+	gtx_status(8) <= '1';
 
  	gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
-	gbt_tx_data_wrapper(0)		<= gbt_tx_data(0);     
+	gbt_tx_data(0)				<= gbt_tx_data_wrapper(0);     
 	gbt_link_status_wrapper(0)	<= gbt_link_status(0);
 	--gbt_ic_tx_data_wrapper(0)	<= gbt_ic_tx_data(0); 
 	--gbt_ic_rx_data_wrapper(0)	<= gbt_ic_rx_data(0); 
@@ -603,15 +628,15 @@ begin
             g_DEBUG      => false
         )
         port map(
-            reset_i             => reset_i,
+            reset_i             => reset_i or reset_pwrup,
             ttc_clk_i           => ttc_clcks,
-            ttc_cmds_i          => ttc_cmd,
+
             gbt_rx_ready_i      => gbt_ready_wrapper,
             gbt_rx_sca_elinks_i => sca_rx_data,
             gbt_tx_sca_elinks_o => sca_tx_data,
             gbt_rx_ic_elinks_i  => gbt_ic_rx_data_wrapper,
             gbt_tx_ic_elinks_o  => gbt_ic_tx_data_wrapper,
-            vfat3_sc_status_i   => vfat3_sc_status,
+
             ipb_reset_i         => reset_i or reset_pwrup,
             ipb_clk_i           => ipb_clk_i,
             ipb_miso_o          => ipb_miso_o(user_ipb_slow_control),
@@ -625,15 +650,15 @@ begin
 
     i_oh_fpga_loader : entity work.oh_fpga_loader
         port map(
-            reset_i           => reset_i,
+            reset_i           => reset_i or reset_pwrup,
             gbt_clk_i         => ttc_clcks.clk_40,
             loader_clk_i      => ttc_clcks.clk_80,
             to_gem_loader_o   => to_gem_loader,
             from_gem_loader_i => from_gem_loader,
             elink_data_o      => promless_tx_data,
-            hard_reset_i      => ttc_cmd.hard_reset
+            hard_reset_i      => reprogram_oh
         );
-        
+
     --================================--
 
 	--================--

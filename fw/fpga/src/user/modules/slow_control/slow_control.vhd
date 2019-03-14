@@ -29,7 +29,6 @@ entity slow_control is
 
         -- TTC
         ttc_clk_i               : in  t_ttc_clks;
-        ttc_cmds_i              : in  t_ttc_cmds;
         
         -- SCA elinks
         gbt_rx_ready_i          : in  std_logic_vector(g_NUM_OF_OHs * 3 - 1 downto 0); 
@@ -39,10 +38,7 @@ entity slow_control is
         -- GBTx IC elinks
         gbt_rx_ic_elinks_i      : in  t_std2_array(g_NUM_OF_OHs * 3 - 1 downto 0);
         gbt_tx_ic_elinks_o      : out t_std2_array(g_NUM_OF_OHs * 3 - 1 downto 0);
-        
-        -- VFAT3 slow control status
-        vfat3_sc_status_i       : in t_vfat_slow_control_status; 
-        
+                
         -- IPbus
         ipb_reset_i             : in  std_logic;
         ipb_clk_i               : in  std_logic;
@@ -155,7 +151,7 @@ begin
                 gbt_rx_sca_elink_i          => gbt_rx_sca_elinks_i(i),
                 gbt_tx_sca_elink_o          => gbt_tx_sca_elinks_o(i),
             
-                hard_reset_i                => manual_hard_reset or (ttc_cmds_i.hard_reset and sca_ttc_hr_enable),
+                hard_reset_i                => manual_hard_reset,
             
                 user_command_i              => sca_user_command,
                 user_command_en_i           => sca_user_command_en and sca_user_command_en_mask(i),
@@ -381,12 +377,6 @@ begin
     regs_read_arr(32)(REG_SLOW_CONTROL_IC_WRITE_DATA_MSB downto REG_SLOW_CONTROL_IC_WRITE_DATA_LSB) <= ic_write_data;
     regs_read_arr(35)(REG_SLOW_CONTROL_IC_GBTX_I2C_ADDR_MSB downto REG_SLOW_CONTROL_IC_GBTX_I2C_ADDR_LSB) <= ic_gbtx_i2c_addr;
     regs_read_arr(36)(REG_SLOW_CONTROL_IC_GBTX_LINK_SELECT_MSB downto REG_SLOW_CONTROL_IC_GBTX_LINK_SELECT_LSB) <= ic_link_select;
-    regs_read_arr(37)(REG_SLOW_CONTROL_VFAT3_CRC_ERROR_CNT_MSB downto REG_SLOW_CONTROL_VFAT3_CRC_ERROR_CNT_LSB) <= vfat3_sc_status_i.crc_error_cnt;
-    regs_read_arr(37)(REG_SLOW_CONTROL_VFAT3_PACKET_ERROR_CNT_MSB downto REG_SLOW_CONTROL_VFAT3_PACKET_ERROR_CNT_LSB) <= vfat3_sc_status_i.packet_error_cnt;
-    regs_read_arr(38)(REG_SLOW_CONTROL_VFAT3_BITSTUFFING_ERROR_CNT_MSB downto REG_SLOW_CONTROL_VFAT3_BITSTUFFING_ERROR_CNT_LSB) <= vfat3_sc_status_i.bitstuff_error_cnt;
-    regs_read_arr(38)(REG_SLOW_CONTROL_VFAT3_TIMEOUT_ERROR_CNT_MSB downto REG_SLOW_CONTROL_VFAT3_TIMEOUT_ERROR_CNT_LSB) <= vfat3_sc_status_i.timeout_error_cnt;
-    regs_read_arr(39)(REG_SLOW_CONTROL_VFAT3_AXI_STROBE_ERROR_CNT_MSB downto REG_SLOW_CONTROL_VFAT3_AXI_STROBE_ERROR_CNT_LSB) <= vfat3_sc_status_i.axi_strobe_error_cnt;
-    regs_read_arr(39)(REG_SLOW_CONTROL_VFAT3_TRANSACTION_CNT_MSB downto REG_SLOW_CONTROL_VFAT3_TRANSACTION_CNT_LSB) <= vfat3_sc_status_i.transaction_cnt;
 
     -- Connect write signals
     sca_ttc_hr_enable <= regs_write_arr(2)(REG_SLOW_CONTROL_SCA_CTRL_TTC_HARD_RESET_EN_BIT);
