@@ -452,248 +452,248 @@ begin
 
 	--===========================================--
 
-	--==========--
-	--    GTX   --
-	--==========--
+	----==========--
+	----    GTX   --
+	----==========--
 
-	i_ibufds_gtxe1 : ibufds_gtxe1
-	port map(
-	o       => mgtclk,
-	odiv2   => open,
-	ceb     => '0',
-	i       => cdce_out0_p,
-	ib      => cdce_out0_n
-	);
+	--i_ibufds_gtxe1 : ibufds_gtxe1
+	--port map(
+	--o       => mgtclk,
+	--odiv2   => open,
+	--ceb     => '0',
+	--i       => cdce_out0_p,
+	--ib      => cdce_out0_n
+	--);
 
-	i_gtx_single : entity work.gtx_single
-	port map (
-		mgt_clk_i               => mgtclk,
+	--i_gtx_single : entity work.gtx_single
+	--port map (
+	--	mgt_clk_i               => mgtclk,
 
-		mgt_rx_p_i              => sfp_rx_p(4),
-		mgt_rx_n_i              => sfp_rx_n(4),
-		mgt_tx_p_o              => sfp_tx_p(4),
-		mgt_tx_n_o              => sfp_tx_n(4),
+	--	mgt_rx_p_i              => sfp_rx_p(4),
+	--	mgt_rx_n_i              => sfp_rx_n(4),
+	--	mgt_tx_p_o              => sfp_tx_p(4),
+	--	mgt_tx_n_o              => sfp_tx_n(4),
 
-		rx_reset_i              => gtx_reset or reset_pwrup,
-		tx_reset_i              => gtx_reset or reset_pwrup,
-		rx_sync_reset_i         => gtx_reset_sync,
-		tx_sync_reset_i         => gtx_reset_sync,
+	--	rx_reset_i              => gtx_reset or reset_pwrup,
+	--	tx_reset_i              => gtx_reset or reset_pwrup,
+	--	rx_sync_reset_i         => gtx_reset_sync,
+	--	tx_sync_reset_i         => gtx_reset_sync,
 
-		TX_WORDCLK_O            => mgt_gbt_tx_word_clk(0),
-		RX_WORDCLK_O            => mgt_gbt_rx_word_clk(0),
+	--	TX_WORDCLK_O            => mgt_gbt_tx_word_clk(0),
+	--	RX_WORDCLK_O            => mgt_gbt_rx_word_clk(0),
 
-		txusrclk_i              => ttc_clcks.clk_120,
+	--	txusrclk_i              => ttc_clcks.clk_120,
 
-		mgt_tx_word_i           => mgt_gbt_tx_word,
-		mgt_rx_word_o           => mgt_gbt_rx_word,
+	--	mgt_tx_word_i           => mgt_gbt_tx_word,
+	--	mgt_rx_word_o           => mgt_gbt_rx_word,
 
-		rx_eq_mix_i             => gtx_config(4 downto 2),
-		tx_conf_diff_i          => gtx_config(8 downto 5),
-		tx_post_emph_i          => gtx_config(13 downto 9),
-		tx_pre_emph_i           => gtx_config(17 downto 14),
+	--	rx_eq_mix_i             => gtx_config(4 downto 2),
+	--	tx_conf_diff_i          => gtx_config(8 downto 5),
+	--	tx_post_emph_i          => gtx_config(13 downto 9),
+	--	tx_pre_emph_i           => gtx_config(17 downto 14),
 
-		tx_reset_done_o         => gtx_status(0),
-		rx_reset_done_o         => gtx_status(1),
-		ready_o                 => gtx_status(2),
+	--	tx_reset_done_o         => gtx_status(0),
+	--	rx_reset_done_o         => gtx_status(1),
+	--	ready_o                 => gtx_status(2),
 
-		tx_pol_i                => gtx_config(0),
-		rx_pol_i                => gtx_config(1),
+	--	tx_pol_i                => gtx_config(0),
+	--	rx_pol_i                => gtx_config(1),
 
-		GBTTX_MGTTX_RDY_O       => gtx_status(3),
-		GBTRX_MGTRX_RDY_O       => gtx_status(4),
-		GBTRX_RXWORDCLK_READY_O => gtx_status(5),
-		prbs_pattern_i_p        => gtx_prbs_pattern(2 downto 0),
-		TXPRBSFORCEERR_IN       => gtx_prbs_pattern(3),
-		PRBSCNTRESET_IN         => gtx_prbs_pattern(4),
-		RXPRBSERR_OUT           => gtx_prbs_errors(0),
-		LOOPBACK_IN             => gtx_prbs_pattern(8 downto 5)
-	);
+	--	GBTTX_MGTTX_RDY_O       => gtx_status(3),
+	--	GBTRX_MGTRX_RDY_O       => gtx_status(4),
+	--	GBTRX_RXWORDCLK_READY_O => gtx_status(5),
+	--	prbs_pattern_i_p        => gtx_prbs_pattern(2 downto 0),
+	--	TXPRBSFORCEERR_IN       => gtx_prbs_pattern(3),
+	--	PRBSCNTRESET_IN         => gtx_prbs_pattern(4),
+	--	RXPRBSERR_OUT           => gtx_prbs_errors(0),
+	--	LOOPBACK_IN             => gtx_prbs_pattern(8 downto 5)
+	--);
 
-	-- GTX mapping to GEM links (GBT)
-	gem_gt_gbt_tx_clk     <= mgt_gbt_tx_word_clk;
-	gem_gt_gbt_rx_clk     <= mgt_gbt_rx_word_clk;
+	---- GTX mapping to GEM links (GBT)
+	--gem_gt_gbt_tx_clk     <= mgt_gbt_tx_word_clk;
+	--gem_gt_gbt_rx_clk     <= mgt_gbt_rx_word_clk;
 
-	mgt_gbt_tx_word       <= gem_gt_gbt_tx_data(0);
-	gem_gt_gbt_rx_data(0) <= mgt_gbt_rx_word;
+	--mgt_gbt_tx_word       <= gem_gt_gbt_tx_data(0);
+	--gem_gt_gbt_rx_data(0) <= mgt_gbt_rx_word;
 
-	--===========================================--
-
-
-	--==========--
-	--    GBT   --
-	--==========--
+	----===========================================--
 
 
-	i_gbt : entity work.gbt
-	    generic map(
-	        GBT_BANK_ID     => 0,
-	        NUM_LINKS       => 1,	-- Only using one single GBT on the OH
-	        TX_OPTIMIZATION => 1,
-	        RX_OPTIMIZATION => 0,
-	        TX_ENCODING     => 0,
-	        RX_ENCODING     => 0
-	    )
-	    port map(
-	        reset_i                     => reset_i or reset_pwrup,
-	        cnt_reset_i                 => gbt_manual_reset,
-
-	        tx_frame_clk_i              => ttc_clcks.clk_40,
-	        rx_frame_clk_i              => ttc_clcks.clk_40,
-	        rx_word_common_clk_i        => ttc_clcks.clk_120,
-
-	        tx_word_clk_arr_i           => gem_gt_gbt_tx_clk,
-	        rx_word_clk_arr_i           => gem_gt_gbt_rx_clk,
-
-	        tx_ready_arr_i              => (others => '1'),
-	        tx_we_arr_i                 => (others => '1'),
-
-	        tx_data_arr_i               => gbt_tx_data,
-	        tx_gearbox_aligned_arr_o    => gbt_tx_gearbox_aligned,
-	        tx_gearbox_align_done_arr_o => gbt_tx_gearbox_align_done,
-
-	        rx_frame_clk_rdy_arr_i      => (others => '1'),
-	        rx_word_clk_rdy_arr_i       => (others => '1'),
-
-	        rx_bitslip_nbr_arr_o        => gbt_rx_bitslip_nbr,
-	        rx_header_arr_o             => gbt_rx_header,
-	        rx_header_locked_arr_o      => gbt_rx_header_locked,
-	        rx_data_valid_arr_o         => gbt_rx_valid,
-	        rx_data_arr_o               => gbt_rx_data,
-
-	        mgt_rx_rdy_arr_i            => (others => '1'),
-	        mgt_tx_data_arr_o           => gem_gt_gbt_tx_data,
-	        mgt_rx_data_arr_i           => gem_gt_gbt_rx_data,
-
-	        link_status_arr_o           => gbt_link_status
-	    );
-
-	gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
-	gtx_status(7) <= gbt_ready_wrapper(0);
-	gtx_status(8) <= '1';
-
- 	gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
-	gbt_tx_data(0)				<= gbt_tx_data_wrapper(0);     
-	gbt_link_status_wrapper(0)	<= gbt_link_status(0);
-	--gbt_ic_tx_data_wrapper(0)	<= gbt_ic_tx_data(0); 
-	--gbt_ic_rx_data_wrapper(0)	<= gbt_ic_rx_data(0); 
-	--gbt_ready_wrapper			<= gbt_ready(0) & "00";      
-
-	i_gbt_link_mux : entity work.gbt_link_mux(gbt_link_mux_ge21)
-	    generic map(
-	        g_NUM_OF_OHs  => 1
-	    )
-	    port map(
-	        gbt_frame_clk_i             => ttc_clcks.clk_40,
-
-	        gbt_rx_data_arr_i           => gbt_rx_data_wrapper,--
-	        gbt_tx_data_arr_o           => gbt_tx_data_wrapper,--
-	        gbt_link_status_arr_i       => gbt_link_status_wrapper,--
-
-	        link_test_mode_i            => loopback_gbt_test_en,
-	        use_oh_vfat3_connectors_i   => '0',
-	        use_v3b_mapping_i           => '0',
-
-	        sca_tx_data_arr_i           => sca_tx_data,
-	        sca_rx_data_arr_o           => sca_rx_data,
-
-	        gbt_ic_tx_data_arr_i        => gbt_ic_tx_data_wrapper,--
-	        gbt_ic_rx_data_arr_o        => gbt_ic_rx_data_wrapper,--
-
-	        promless_tx_data_i          => promless_tx_data,
-
-	        oh_fpga_tx_data_arr_i       => oh_fpga_tx_data,
-	        oh_fpga_rx_data_arr_o       => oh_fpga_rx_data,
-
-	        vfat3_tx_data_arr_i         => vfat3_tx_data,
-	        vfat3_rx_data_arr_o         => vfat3_rx_data,
-
-	        gbt_ready_arr_o             => gbt_ready_wrapper,--
-
-	        tst_gbt_rx_data_arr_o       => open,--
-	        tst_gbt_tx_data_arr_i       => tst_gbt_tx_data_arr,--
-	        tst_gbt_ready_arr_o         => open--
-	    );
-
-	--===========================================--
+	----==========--
+	----    GBT   --
+	----==========--
 
 
+	--i_gbt : entity work.gbt
+	--    generic map(
+	--        GBT_BANK_ID     => 0,
+	--        NUM_LINKS       => 1,	-- Only using one single GBT on the OH
+	--        TX_OPTIMIZATION => 1,
+	--        RX_OPTIMIZATION => 0,
+	--        TX_ENCODING     => 0,
+	--        RX_ENCODING     => 0
+	--    )
+	--    port map(
+	--        reset_i                     => reset_i or reset_pwrup,
+	--        cnt_reset_i                 => gbt_manual_reset,
 
-    --===================--
-    --    Slow Control   --
-    --===================--
+	--        tx_frame_clk_i              => ttc_clcks.clk_40,
+	--        rx_frame_clk_i              => ttc_clcks.clk_40,
+	--        rx_word_common_clk_i        => ttc_clcks.clk_120,
 
-    i_slow_control : entity work.slow_control
-        generic map(
-            g_NUM_OF_OHs => 1,
-            g_DEBUG      => false
-        )
-        port map(
-            reset_i             => reset_i or reset_pwrup,
-            ttc_clk_i           => ttc_clcks,
+	--        tx_word_clk_arr_i           => gem_gt_gbt_tx_clk,
+	--        rx_word_clk_arr_i           => gem_gt_gbt_rx_clk,
 
-            gbt_rx_ready_i      => gbt_ready_wrapper,
-            gbt_rx_sca_elinks_i => sca_rx_data,
-            gbt_tx_sca_elinks_o => sca_tx_data,
-            gbt_rx_ic_elinks_i  => gbt_ic_rx_data_wrapper,
-            gbt_tx_ic_elinks_o  => gbt_ic_tx_data_wrapper,
+	--        tx_ready_arr_i              => (others => '1'),
+	--        tx_we_arr_i                 => (others => '1'),
 
-            ipb_reset_i         => reset_i or reset_pwrup,
-            ipb_clk_i           => ipb_clk_i,
-            ipb_miso_o          => ipb_miso_o(user_ipb_slow_control),
-            ipb_mosi_i          => ipb_mosi_i(user_ipb_slow_control)
-        );
-	--===========================================--
+	--        tx_data_arr_i               => gbt_tx_data,
+	--        tx_gearbox_aligned_arr_o    => gbt_tx_gearbox_aligned,
+	--        tx_gearbox_align_done_arr_o => gbt_tx_gearbox_align_done,
 
-    --===========================--
-    --    OH FPGA programming    --
-    --===========================--
+	--        rx_frame_clk_rdy_arr_i      => (others => '1'),
+	--        rx_word_clk_rdy_arr_i       => (others => '1'),
 
-    i_oh_fpga_loader : entity work.oh_fpga_loader
-        port map(
-            reset_i           => reset_i or reset_pwrup,
-            gbt_clk_i         => ttc_clcks.clk_40,
-            loader_clk_i      => ttc_clcks.clk_80,
-            to_gem_loader_o   => to_gem_loader,
-            from_gem_loader_i => from_gem_loader,
-            elink_data_o      => promless_tx_data,
-            hard_reset_i      => reprogram_oh
-        );
+	--        rx_bitslip_nbr_arr_o        => gbt_rx_bitslip_nbr,
+	--        rx_header_arr_o             => gbt_rx_header,
+	--        rx_header_locked_arr_o      => gbt_rx_header_locked,
+	--        rx_data_valid_arr_o         => gbt_rx_valid,
+	--        rx_data_arr_o               => gbt_rx_data,
 
-    --================================--
+	--        mgt_rx_rdy_arr_i            => (others => '1'),
+	--        mgt_tx_data_arr_o           => gem_gt_gbt_tx_data,
+	--        mgt_rx_data_arr_i           => gem_gt_gbt_rx_data,
 
-	--================--
-    --== GEM loader ==--
-    --================--
+	--        link_status_arr_o           => gbt_link_status
+	--    );
 
-    sram1_bwa <= '0';
-    sram1_bwb <= '0';
-    sram1_bwc <= '0';
-    sram1_bwd <= '0';
+	--gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
+	--gtx_status(7) <= gbt_ready_wrapper(0);
+	--gtx_status(8) <= '1';
 
-    user_sram_addr_o(1)  <= sram_addr;
-    user_sram_wdata_o(1) <= (others => '0');
-    sram_rdata           <= user_sram_rdata_i(1);
-    user_sram_control_o(1).reset       <= '0';
-    user_sram_control_o(1).clk         <= to_gem_loader.clk;
-    user_sram_control_o(1).writeEnable <= '0';
-    user_sram_control_o(1).cs          <= sram_cs;
+ --	gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
+	--gbt_tx_data(0)				<= gbt_tx_data_wrapper(0);     
+	--gbt_link_status_wrapper(0)	<= gbt_link_status(0);
+	----gbt_ic_tx_data_wrapper(0)	<= gbt_ic_tx_data(0); 
+	----gbt_ic_rx_data_wrapper(0)	<= gbt_ic_rx_data(0); 
+	----gbt_ready_wrapper			<= gbt_ready(0) & "00";      
 
-    i_gem_loader : entity work.gem_loader
-    port map ( 
-        clk_i => to_gem_loader.clk,
-        en_i  => to_gem_loader.en,
+	--i_gbt_link_mux : entity work.gbt_link_mux(gbt_link_mux_ge21)
+	--    generic map(
+	--        g_NUM_OF_OHs  => 1
+	--    )
+	--    port map(
+	--        gbt_frame_clk_i             => ttc_clcks.clk_40,
+
+	--        gbt_rx_data_arr_i           => gbt_rx_data_wrapper,--
+	--        gbt_tx_data_arr_o           => gbt_tx_data_wrapper,--
+	--        gbt_link_status_arr_i       => gbt_link_status_wrapper,--
+
+	--        link_test_mode_i            => loopback_gbt_test_en,
+	--        use_oh_vfat3_connectors_i   => '0',
+	--        use_v3b_mapping_i           => '0',
+
+	--        sca_tx_data_arr_i           => sca_tx_data,
+	--        sca_rx_data_arr_o           => sca_rx_data,
+
+	--        gbt_ic_tx_data_arr_i        => gbt_ic_tx_data_wrapper,--
+	--        gbt_ic_rx_data_arr_o        => gbt_ic_rx_data_wrapper,--
+
+	--        promless_tx_data_i          => promless_tx_data,
+
+	--        oh_fpga_tx_data_arr_i       => oh_fpga_tx_data,
+	--        oh_fpga_rx_data_arr_o       => oh_fpga_rx_data,
+
+	--        vfat3_tx_data_arr_i         => vfat3_tx_data,
+	--        vfat3_rx_data_arr_o         => vfat3_rx_data,
+
+	--        gbt_ready_arr_o             => gbt_ready_wrapper,--
+
+	--        tst_gbt_rx_data_arr_o       => open,--
+	--        tst_gbt_tx_data_arr_i       => tst_gbt_tx_data_arr,--
+	--        tst_gbt_ready_arr_o         => open--
+	--    );
+
+	----===========================================--
+
+
+
+ --   --===================--
+ --   --    Slow Control   --
+ --   --===================--
+
+ --   i_slow_control : entity work.slow_control
+ --       generic map(
+ --           g_NUM_OF_OHs => 1,
+ --           g_DEBUG      => false
+ --       )
+ --       port map(
+ --           reset_i             => reset_i or reset_pwrup,
+ --           ttc_clk_i           => ttc_clcks,
+
+ --           gbt_rx_ready_i      => gbt_ready_wrapper,
+ --           gbt_rx_sca_elinks_i => sca_rx_data,
+ --           gbt_tx_sca_elinks_o => sca_tx_data,
+ --           gbt_rx_ic_elinks_i  => gbt_ic_rx_data_wrapper,
+ --           gbt_tx_ic_elinks_o  => gbt_ic_tx_data_wrapper,
+
+ --           ipb_reset_i         => reset_i or reset_pwrup,
+ --           ipb_clk_i           => ipb_clk_i,
+ --           ipb_miso_o          => ipb_miso_o(user_ipb_slow_control),
+ --           ipb_mosi_i          => ipb_mosi_i(user_ipb_slow_control)
+ --       );
+	----===========================================--
+
+ --   --===========================--
+ --   --    OH FPGA programming    --
+ --   --===========================--
+
+ --   i_oh_fpga_loader : entity work.oh_fpga_loader
+ --       port map(
+ --           reset_i           => reset_i or reset_pwrup,
+ --           gbt_clk_i         => ttc_clcks.clk_40,
+ --           loader_clk_i      => ttc_clcks.clk_80,
+ --           to_gem_loader_o   => to_gem_loader,
+ --           from_gem_loader_i => from_gem_loader,
+ --           elink_data_o      => promless_tx_data,
+ --           hard_reset_i      => reprogram_oh
+ --       );
+
+ --   --================================--
+
+	----================--
+ --   --== GEM loader ==--
+ --   --================--
+
+ --   sram1_bwa <= '0';
+ --   sram1_bwb <= '0';
+ --   sram1_bwc <= '0';
+ --   sram1_bwd <= '0';
+
+ --   user_sram_addr_o(1)  <= sram_addr;
+ --   user_sram_wdata_o(1) <= (others => '0');
+ --   sram_rdata           <= user_sram_rdata_i(1);
+ --   user_sram_control_o(1).reset       <= '0';
+ --   user_sram_control_o(1).clk         <= to_gem_loader.clk;
+ --   user_sram_control_o(1).writeEnable <= '0';
+ --   user_sram_control_o(1).cs          <= sram_cs;
+
+ --   i_gem_loader : entity work.gem_loader
+ --   port map ( 
+ --       clk_i => to_gem_loader.clk,
+ --       en_i  => to_gem_loader.en,
         
-        sram_rdata_i => sram_rdata(31 downto 0),
-        sram_addr_o  => sram_addr,
-        sram_cs_o    => sram_cs,
+ --       sram_rdata_i => sram_rdata(31 downto 0),
+ --       sram_addr_o  => sram_addr,
+ --       sram_cs_o    => sram_cs,
 
-        ready_o => from_gem_loader.ready,
-        data_o  => from_gem_loader.data,
-        valid_o => from_gem_loader.valid,
-        first_o => from_gem_loader.first,
-        last_o  => from_gem_loader.last,
-        error_o => from_gem_loader.error
-    );
+ --       ready_o => from_gem_loader.ready,
+ --       data_o  => from_gem_loader.data,
+ --       valid_o => from_gem_loader.valid,
+ --       first_o => from_gem_loader.first,
+ --       last_o  => from_gem_loader.last,
+ --       error_o => from_gem_loader.error
+ --   );
 
     --===========================================--
 
