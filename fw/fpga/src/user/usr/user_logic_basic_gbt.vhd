@@ -228,7 +228,11 @@ architecture user_logic_arch of user_logic_gbt is
     signal gtx_reset, gtx_reset_sync : std_logic;
     signal gtx_config, gtx_status, gtx_prbs_pattern, gtx_prbs_errors : std_logic_vector(31 downto 0);
 
-    signal reprogram_oh : std_logic := '0';
+    signal reprog_oh : std_logic := '0';
+    signal reprog_oh_samp : std_logic;
+    signal reprog_oh_pulse : std_logic := '0';
+    signal promless_only : std_logic := '0';
+	signal promless_only_pulse : std_logic := '0';
 
     --== Slow control ==--
     signal vfat3_sc_status              : t_vfat_slow_control_status; 
@@ -252,6 +256,7 @@ architecture user_logic_arch of user_logic_gbt is
 	signal gbt_manual_reset 			: std_logic := '0';
 	signal gbt_link_status         	    : t_gbt_link_status_arr(0 downto 0);
 	signal loopback_gbt_test_en         : std_logic := '0'; 
+	signal oh_v3b_mapping				: std_logic := '0';
 
 	signal gbt_tx_data              	: t_gbt_frame_array(0 downto 0);    
     signal gbt_tx_gearbox_aligned   	: std_logic_vector(0 downto 0);
@@ -356,8 +361,13 @@ begin
 	);
 	--===========================================--
 
-	stat_reg(0)			<= gtx_status;
-	stat_reg(1) 		<= gtx_prbs_errors;
+	stat_reg(0)				<= gtx_status;
+	stat_reg(1) 			<= gtx_prbs_errors;
+	stat_reg(2)(7 downto 0) <= oh_fpga_rx_data(0); -- 8 bit vector
+
+	gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
+	gtx_status(7) <= gbt_ready_wrapper(0);
+	gtx_status(8) <= '1';
 
 	--===========================================--
 	ctrl_regs_inst: entity work.ipb_user_control_regs
@@ -377,13 +387,13 @@ begin
 	gtx_reset_sync 		<= ctrl_reg(1)(1);
 	gbt_manual_reset 	<= ctrl_reg(1)(2);
 	gtx_prbs_pattern 	<= ctrl_reg(2);
-    reprogram_oh 		<= ctrl_reg(3)(0);
+    reprog_oh 			<= ctrl_reg(3)(0);
+    promless_only  		<= ctrl_reg(3)(1);
 
 	--===========================================--
 	-- register mapping
 	--===========================================--
 	led1 			<= gtx_status(2);
-	--led2 			<= gbt_link_status(0).gbt_rx_ready;
 	led2			<= gbt_ready_wrapper(0);
 	--===========================================--
 
@@ -567,16 +577,9 @@ begin
 	        link_status_arr_o           => gbt_link_status
 	    );
 
-	gtx_status(6) <= gbt_link_status(0).gbt_rx_ready;
-	gtx_status(7) <= gbt_ready_wrapper(0);
-	gtx_status(8) <= '1';
-
  	gbt_rx_data_wrapper(0) 		<= gbt_rx_data(0);
 	gbt_tx_data(0)				<= gbt_tx_data_wrapper(0);     
-	gbt_link_status_wrapper(0)	<= gbt_link_status(0);
-	--gbt_ic_tx_data_wrapper(0)	<= gbt_ic_tx_data(0); 
-	--gbt_ic_rx_data_wrapper(0)	<= gbt_ic_rx_data(0); 
-	--gbt_ready_wrapper			<= gbt_ready(0) & "00";      
+	gbt_link_status_wrapper(0)	<= gbt_link_status(0);     
 
 	i_gbt_link_mux : entity work.gbt_link_mux(gbt_link_mux_ge21)
 	    generic map(
@@ -589,9 +592,9 @@ begin
 	        gbt_tx_data_arr_o           => gbt_tx_data_wrapper,--
 	        gbt_link_status_arr_i       => gbt_link_status_wrapper,--
 
-	        link_test_mode_i            => loopback_gbt_test_en,
+	        link_test_mode_i            => '0',
 	        use_oh_vfat3_connectors_i   => '0',
-	        use_v3b_mapping_i           => '0',
+	        use_v3b_mapping_i           => oh_v3b_mapping,
 
 	        sca_tx_data_arr_i           => sca_tx_data,
 	        sca_rx_data_arr_o           => sca_rx_data,
@@ -630,6 +633,7 @@ begin
         port map(
             reset_i             => reset_i or reset_pwrup,
             ttc_clk_i           => ttc_clcks,
+            pulse_progb_i		=> reprog_oh_pulse,
 
             gbt_rx_ready_i      => gbt_ready_wrapper,
             gbt_rx_sca_elinks_i => sca_rx_data,
@@ -656,8 +660,20 @@ begin
             to_gem_loader_o   => to_gem_loader,
             from_gem_loader_i => from_gem_loader,
             elink_data_o      => promless_tx_data,
-            hard_reset_i      => reprogram_oh
+            hard_reset_i      => reprog_oh_pulse or promless_only
         );
+
+	reprog_pulse_proc : process( ttc_clcks.clk_40 )
+    begin
+    	if( rising_edge(ttc_clcks.clk_40)) then
+    		reprog_oh_samp <= reprog_oh;
+    		if (reprog_oh_samp = '0' and reprog_oh = '1') then
+    				 <= '1';
+			else
+				reprog_oh_pulse <= '0';
+    		end if;
+    	end if ;
+    end process ; -- reprog_pulse_proc  
 
     --================================--
 

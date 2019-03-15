@@ -29,7 +29,8 @@ entity slow_control is
 
         -- TTC
         ttc_clk_i               : in  t_ttc_clks;
-        
+        pulse_progb_i           : in std_logic;
+
         -- SCA elinks
         gbt_rx_ready_i          : in  std_logic_vector(g_NUM_OF_OHs * 3 - 1 downto 0); 
         gbt_rx_sca_elinks_i     : in  t_std2_array(g_NUM_OF_OHs - 1 downto 0);
@@ -151,7 +152,7 @@ begin
                 gbt_rx_sca_elink_i          => gbt_rx_sca_elinks_i(i),
                 gbt_tx_sca_elink_o          => gbt_tx_sca_elinks_o(i),
             
-                hard_reset_i                => manual_hard_reset,
+                hard_reset_i                => manual_hard_reset or pulse_progb_i,
             
                 user_command_i              => sca_user_command,
                 user_command_en_i           => sca_user_command_en and sca_user_command_en_mask(i),
