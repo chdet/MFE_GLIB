@@ -11,6 +11,10 @@ entity ipb_user_fifo_fwft is
 		ipbclk     : in  std_logic; 
 		usrclk     : in  std_logic; 
 		reset      : in  std_logic; 
+
+		din_ext	   : in  std_logic_vector(31 downto 0);
+		din_ext_en : in std_logic;
+
 		ipb_mosi_i : in  ipb_wbus; 
 		ipb_miso_o : out ipb_rbus
 		------------------
@@ -70,7 +74,8 @@ begin
 		end if; 
 	end process; 
 	
-	din <= std_logic_vector(cnt); 
+	din <= std_logic_vector(cnt) when din_ext_en = '0' else
+		   din_ext				 when din_ext_en = '1'; 
 	
 	i_oh_rx_fifo : usr_fifo_fwft
 		PORT MAP (

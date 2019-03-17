@@ -233,6 +233,11 @@ architecture user_logic_arch of user_logic_gbt is
     signal reprog_oh_pulse : std_logic := '0';
     signal promless_only : std_logic := '0';
 	signal promless_only_pulse : std_logic := '0';
+	signal fifo_reset : std_logic := '0';
+	signal fifo_oh_link_en : std_logic := '0';
+
+	signal fifo_input_buffer : std_logic_vector(31 downto 0);
+	signal fifo_input        : std_logic_vector(31 downto 0);
 
     --== Slow control ==--
     signal vfat3_sc_status              : t_vfat_slow_control_status; 
@@ -342,7 +347,9 @@ begin
 	port map (
 	ipbclk        		=> ipb_clk_i,
 	usrclk     	  		=> usrclk_10,
-	reset      	  		=> reset_i,
+	reset      	  		=> reset_i or fifo_reset,
+	din_ext				=> fifo_input,
+	din_ext_en			=> fifo_oh_link_en,
 	ipb_mosi_i 	  		=> ipb_mosi_i(user_ipb_fifo),
 	ipb_miso_o 	  		=> ipb_miso_o(user_ipb_fifo)
 	);	
@@ -389,6 +396,8 @@ begin
 	gtx_prbs_pattern 	<= ctrl_reg(2);
     reprog_oh 			<= ctrl_reg(3)(0);
     promless_only  		<= ctrl_reg(3)(1);
+    fifo_reset  		<= ctrl_reg(3)(2);
+    fifo_oh_link_en		<= ctrl_reg(3)(3);
 
 	--===========================================--
 	-- register mapping
@@ -619,6 +628,28 @@ begin
 
 	--===========================================--
 
+	--============================--
+    --    OH Data concatenation   --
+    --============================--
+
+    shift_reg : process(ttc_clcks.clk_40)
+    begin
+    	if( rising_edge(ttc_clcks.clk_40) ) then
+    		fifo_input_buffer(31 downto 24) <= fifo_input_buffer(23 downto 16);
+    		fifo_input_buffer(23 downto 16) <= fifo_input_buffer(15 downto 8);
+    		fifo_input_buffer(15 downto 8)  <= fifo_input_buffer(7 downto 0);
+    		fifo_input_buffer(7 downto 0)   <= oh_fpga_rx_data(0);
+    	end if ;
+    end process ; -- shift_reg
+
+    fifo_input_sampling : process(usrclk_10)
+    begin
+    	if( rising_edge(usrclk_10) ) then
+    		fifo_input <= fifo_input_buffer;
+    	end if ;
+    end process ; -- fifo_input_sampling
+
+	--===========================================--
 
 
     --===================--
@@ -668,7 +699,7 @@ begin
     	if( rising_edge(ttc_clcks.clk_40)) then
     		reprog_oh_samp <= reprog_oh;
     		if (reprog_oh_samp = '0' and reprog_oh = '1') then
-    				 <= '1';
+    			reprog_oh_pulse <= '1';
 			else
 				reprog_oh_pulse <= '0';
     		end if;
